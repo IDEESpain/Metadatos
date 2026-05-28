@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Metadatos</title>
+</head>
+<body>
+    <h1>Formulario INSPIRE</h1>
+
+    <form id="metadataForm">
+
+        <label>Título del recurso</label>
+        <input type="text" id="title" required>
+
+        <br><br>
+
+        <label>Resumen</label>
+        <textarea id="abstract" required></textarea>
+
+        <br><br>
+
+        <label>Fecha metadato</label>
+        <input type="date" id="date" required>
+
+        <br><br>
+
+        <button type="submit">
+        Generar XML
+        </button>
+
+    </form>
+
+    <script src="js/genXML.js"></script>
+
+    
+</body>
+</html>
