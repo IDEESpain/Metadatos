@@ -113,9 +113,7 @@ Identificador único del fichero de metadatos.
 
 ## Idioma de los metadatos (gmd:language)
 
-**Ruta:**
-
-`gmd:MD_Metadata/gmd:language`
+**Ruta:** `gmd:MD_Metadata/gmd:language`
 
 **Descripción:**
 
@@ -136,9 +134,7 @@ Lengua del fichero de metadatos.
 
 ## gmd:characterSet
 
-**Ruta:**
-
-`gmd:MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet`
+**Ruta:** `gmd:MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet`
 
 **Descripción:**
 
@@ -161,9 +157,7 @@ Codificación de caracteres utilizada en el conjunto de datos.
 
 ## gmd:hierarchyLevel
 
-**Ruta:**
-
-`gmd:MD_Metadata/gmd:hierarchyLevel`
+**Ruta:** `gmd:MD_Metadata/gmd:hierarchyLevel`
 
 **Descripción:**
 
@@ -185,9 +179,7 @@ Tipo de recurso.
 
 ## gmd:contact
 
-**Ruta:**
-
-`gmd:MD_Metadata/gmd:contact`
+**Ruta:** `gmd:MD_Metadata/gmd:contact`
 
 **Descripción:**
 
@@ -215,9 +207,7 @@ Información mínima:
 
 ## gmd:dateStamp
 
-**Ruta:**
-
-`gmd:MD_Metadata/gmd:dateStamp`
+**Ruta:** `gmd:MD_Metadata/gmd:dateStamp`
 
 **Descripción:**
 
