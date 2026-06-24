@@ -31,7 +31,7 @@ Descripción de los elementos mínimos de metadatos defindos en las normas inter
 ## Metadatos para conjuntos de datos y series espaciales
 | Descripción | Dominio | Cardinalidad | Propiedad |
 |---|---|:---:|---|
-| **Identificador único del registro de metadatos** | Texto libre | 1 | gmd:fileIdentifier |
+| [**Identificador único del registro de metadatos**](#fileidentifier) | Texto libre | 1 | `gmd:fileIdentifier` |
 | **Idioma empleado en los metadatos** | ISO 639-2 (3 letras) | 1 | gmd:language |
 | **Tipo de recurso descrito por los metadatos** | Lista controlada | 1 | gmd:hierarchyLevel |
 | **Punto de contacto responsable de los metadatos** | Organización, dirección y rol | 1 | gmd:contact |
@@ -86,11 +86,9 @@ Además de los elementos de metadatos anteriores se suman estos otros específic
 
 # Descripción detallada de los elementos de metadatos
 
-## Identificador único del fichero de metadatos (<span style="color:#28a74;">gmd:fileIdentifier</span>)
+## Identificador único del fichero de metadatos (`gmd:fileIdentifier`)
 
-**Ruta:**
-
-`gmd:MD_Metadata/gmd:fileIdentifier`
+**Ruta:** `gmd:MD_Metadata/gmd:fileIdentifier`
 
 **Descripción:**
 
