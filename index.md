@@ -115,9 +115,7 @@ Además de los elementos de metadatos anteriores se suman estos otros específic
 
 **Ruta:** `gmd:MD_Metadata/gmd:language`
 
-**Descripción:**
-
-Lengua del fichero de metadatos.
+**Descripción:** Lengua del fichero de metadatos.
 
 - Lista controlada ISO 639.
 - Un fichero de metadatos no puede soportar más de un idioma.
@@ -136,9 +134,7 @@ Lengua del fichero de metadatos.
 
 **Ruta:** `gmd:MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet`
 
-**Descripción:**
-
-Codificación de caracteres utilizada en el conjunto de datos.
+**Descripción:** Codificación de caracteres utilizada en el conjunto de datos.
 
 - Lista controlada.
 - Obligatorio si se utiliza una codificación no UTF-8.
@@ -155,13 +151,11 @@ Codificación de caracteres utilizada en el conjunto de datos.
 
 ---
 
-## gmd:hierarchyLevel
+## Tipo de recurso (`gmd:hierarchyLevel´)
 
 **Ruta:** `gmd:MD_Metadata/gmd:hierarchyLevel`
 
-**Descripción:**
-
-Tipo de recurso.
+**Descripción:** Tipo de recurso.
 
 **Ejemplo:**
 
@@ -177,13 +171,11 @@ Tipo de recurso.
 
 ---
 
-## gmd:contact
+## Punto de contacto de los metadatos (`gmd:contact`)
 
 **Ruta:** `gmd:MD_Metadata/gmd:contact`
 
-**Descripción:**
-
-Organización responsable de la creación y mantenimiento de los metadatos.
+**Descripción:** Organización responsable de la creación y mantenimiento de los metadatos.
 
 Información mínima:
 
@@ -209,9 +201,7 @@ Información mínima:
 
 **Ruta:** `gmd:MD_Metadata/gmd:dateStamp`
 
-**Descripción:**
-
-Fecha de creación o actualización del registro.
+**Descripción:** Fecha de creación o actualización del registro.
 
 **Ejemplo:**
 
@@ -225,13 +215,9 @@ Fecha de creación o actualización del registro.
 
 ## gmd:title
 
-**Ruta:**
+**Ruta:** `MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title`
 
-`MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title`
-
-**Descripción:**
-
-Título del recurso.
+**Descripción:** Título del recurso.
 
 **Ejemplo:**
 
@@ -243,15 +229,11 @@ Título del recurso.
 
 ---
 
-## gmd:abstract
+## Resumen (`gmd:abstract`)
 
-**Ruta:**
+**Ruta:** `MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract`
 
-`MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract`
-
-**Descripción:**
-
-Resumen del recurso.
+**Descripción:** Resumen del recurso.
 
 **Ejemplo:**
 
