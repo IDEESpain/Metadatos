@@ -1,26 +1,21 @@
-# Metadatos de conjuntos de datos espaciales de alto valor y servicios espaciales
+# <img width="76" height="64" alt="IDEE-Git" src="https://github.com/user-attachments/assets/fa7715c9-9a36-4445-9917-597d2e392928" /> Metadatos Geográficos
 
-## Resumen
+## Objetivo
 
-Descripción detallada de los elementos mínimos de metadatos para describir conjuntos de datos geoespaciales, servicios y series, facilitando su interoperabilidad.
-
----
-
-## Introducción
-
-Describe los elementos de metadatos geoespaciales que lleva asociado un producto.
+Descripción de los elementos mínimos de metadatos defindos en las normas internacionales **ISO 19115/ISO 19119** que cubren los elementos de metadatos del [Reglamento (CE) No 1205/2008 en lo que se refiere a los metadatos](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF) para describir: 
+- conjuntos de datos espaciales,
+- series de conjuntos de datos espaciales,
+- y servicios de datos espaciales  
 
 ---
 
 ## Contexto normativo
 
-- Directiva Inspire 2007/2/CE1 establece las reglas generales para la formación de una Infraestructura de Datos Espaciales en la Comunidad Europea.
-- Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE).
-- Reglamento (CE) Nº 1205/2008 en lo que se refiere a los metadatos.
+- [Directiva Inspire 2007/2/CE1 establece las reglas generales para la formación de una Infraestructura de Datos Espaciales en la Comunidad Europea](https://www.boe.es/doue/2007/108/L00001-00014.pdf).
+- [Ley 14/2010, de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE)](https://www.boe.es/eli/es/l/2010/07/05/14/dof/spa/pdf).
+- [Reglamento (CE) No 1205/2008 en lo que se refiere a los metadatos](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF).
 - Corrección de errores del Reglamento (CE) Nº 1205/2008.
-- Directrices Técnicas sobre metadatos.
-- Reglamento (UE) Nº 1089/201013 en lo que se refiere a la interoperabilidad de los conjuntos y los servicios de datos espaciales.
-
+- Directrices Técnicas sobre metadatos: [Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007](https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en)
 ---
 
 ## Historial de Revisiones
@@ -31,35 +26,35 @@ Describe los elementos de metadatos geoespaciales que lleva asociado un producto
 
 ---
 
-# Entidades Principales
+# Elementos de metadatos
 
-## Elementos de metadatos sobre los datos
+## Metadatos para conjuntos de datos y series espaciales
+| Descripción | Dominio | Cardinalidad | Propiedad |
+|---|---|:---:|---|
+| **Identificador único del registro de metadatos** | Texto libre | 1 | gmd:fileIdentifier |
+| **Idioma empleado en los metadatos** | ISO 639-2 (3 letras) | 1 | gmd:language |
+| **Tipo de recurso descrito por los metadatos** | Lista controlada | 1 | gmd:hierarchyLevel |
+| **Punto de contacto responsable de los metadatos** | Organización, dirección y rol | 1 | gmd:contact |
+| **Fecha de creación o actualización de los metadatos** | ISO 8601 | 1 | gmd:dateStamp |
+| **Nombre de la norma de metadatos utilizada** | Texto libre | 1 | gmd:metadataStandardName |
+| **Versión de la norma de metadatos utilizada** | Texto libre | 1 | gmd:metadataStandardVersion |
+| **Título del recurso** | Texto libre | 1 | gmd:title |
+| **Descripción resumida del recurso** | Texto libre | 1 | gmd:abstract |
+| **Punto(s) de contacto del recurso** | Texto libre / lista controlada | 1..* | gmd:pointOfContact |
+| **Fechas relevantes asociadas al recurso** | ISO 8601 / lista controlada | 1..* | gmd:date |
+| **Identificador único del recurso** | Texto libre | 1..* | gmd:MD_Identifier |
+| **Palabras clave asociadas al recurso** | Texto libre / vocabularios controlados | 1..* | gmd:MD_Keywords |
+| **Restricciones de acceso y uso** | Lista controlada | 1..* | gmd:MD_LegalConstraints |
+| **Escala o resolución espacial** | Entero o decimal | 1..* | gmd:MD_Resolution |
+| **Idioma(s) del recurso** | ISO 639-2 | 1..* | gmd:MD_DataIdentification/gmd:language |
+| **Categoría temática del recurso** | Lista controlada | 1..* | gmd:topicCategory |
+| **Extensión o localización geográfica** | Bounding Box | 1..* | gmd:EX_Extent |
+| **Formato de distribución del recurso** | Texto libre / lista controlada | 1..* | gmd:MD_Format |
+| **Recurso en línea para acceso o descarga** | URL | 1..* | gmd:CI_OnlineResource |
+| **Alcance del recurso** | Lista controlada | 1 | gmd:scope |
+| **Linaje y descripción de la calidad del recurso** | Texto libre | 1 | gmd:LI_Lineage |
 
-| Propiedad | Dominio | Cardinalidad | Descripción |
-|---|---|---|---|
-| gmd:fileIdentifier | Texto libre | 1 | Identificador único del fichero de metadatos |
-| gmd:language | Tres letras. Lista controlada de la ISO 639-2 | 1 | Idioma de los metadatos |
-| gmd:hierarchyLevel | Lista controlada | 1 | Nivel jerárquico del recurso |
-| gmd:contact | Organización, dirección y rol | 1 | Punto de contacto de los metadatos |
-| gmd:dateStamp | ISO 8601 | 1 | Fecha de los metadatos |
-| gmd:metadataStandardName | Texto libre | 1 | Nombre de la norma de metadatos |
-| gmd:metadataStandardVersion | Texto libre | 1 | Versión de la norma de metadatos |
-| gmd:title | Texto libre | 1 | Título del conjunto de datos |
-| gmd:abstract | Texto libre | 1 | Resumen del conjunto de datos |
-| gmd:pointOfContact | Texto libre / lista controlada | 1.* | Punto de contacto del recurso |
-| gmd:date | ISO 8601 / Lista controlada | 1.* | Referencias temporales |
-| gmd:MD_Identifier | Texto libre | 1.* | Identificador único del recurso |
-| gmd:MD_Keywords | Texto libre / vocabularios controlados | 1.* | Palabras clave |
-| gmd:MD_LegalConstraints | Lista controlada | 1.* | Restricciones en el acceso y uso |
-| gmd:MD_Resolution | Entero o decimal | 1.* | Escala o Resolución espacial |
-| gmd:MD_DataIdentification/gmd:language | ISO 639-2 | 1.* | Idioma del recurso |
-| gmd:topicCategory | Lista controlada | 1.* | Categoría del tema del recurso |
-| gmd:EX_Extent | Bounding Box | 1.* | Localización geográfica |
-| gmd:MD_Format | Texto libre / lista controlada | 1.* | Formato de distribución |
-| gmd:CI_OnlineResource | URL | 1.* | URL de distribución |
-| gmd:scope | Lista controlada | 1 | Alcance del recurso |
-| gmd:LI_Lineage | Texto libre | 1 | Tipo/alcance del recurso |
-
+- Veáse tabla en el Reglamento de metadatos, [aquí](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=8)
 ---
 
 ## Elementos de metadatos de interoperabilidad
@@ -73,22 +68,25 @@ Describe los elementos de metadatos geoespaciales que lleva asociado un producto
 
 ---
 
-## Elementos de metadatos específicos para los servicios
+## Metadatos para los servicios espaciales
 
-| Propiedad | Dominio | Cardinalidad | Descripción |
-|---|---|---|---|
-| srv:serviceType | Lista controlada | 1 | Tipo de Servicio |
-| srv:couplingType | Lista controlada | 1 | Tipo del recurso acoplado |
-| srv:serviceTypeVersion | Texto libre | 0...* | Versión del servicio |
-| srv:containsOperations | Nombre operación / protocolo / URL | 0...* | Operaciones del tipo de servicio |
-| SV_CoupledResource | Identificador del recurso | 0...* | Recurso acoplado |
-| srv:operatesOn | URL | 0...* | Opera en |
+Además de los elementos de metadatos anteriores se suman estos otros específicos para los sercioes de visualización, descarga, localización y API.
 
+| Descripción | Dominio | Cardinalidad | Propiedad |
+|---|---|:---:|---|
+| **Tipo de servicio** | Lista controlada | 1 | srv:serviceType |
+| **Tipo del recurso acoplado** | Lista controlada | 1 | srv:couplingType |
+| **Versión del servicio** | Texto libre | 0..* | srv:serviceTypeVersion |
+| **Operaciones del tipo de servicio** | Nombre de operación / protocolo / URL | 0..* | srv:containsOperations |
+| **Recurso acoplado** | Identificador del recurso | 0..* | SV_CoupledResource |
+| **Opera en** | URL | 0..* | srv:operatesOn |
+
+- Veáse tabla en el Reglamento de metadatos, [aquí](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=9)
 ---
 
-# Detalle de propiedades
+# Descripción detallada de los elementos de metadatos
 
-## gmd:fileIdentifier
+## Identificador único del fichero de metadatos (<span style="color:#28a74;">gmd:fileIdentifier</span>)
 
 **Ruta:**
 
@@ -115,7 +113,7 @@ Identificador único del fichero de metadatos.
 
 ---
 
-## gmd:language
+## Idioma de los metadatos (gmd:language)
 
 **Ruta:**
 
