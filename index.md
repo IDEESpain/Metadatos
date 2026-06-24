@@ -86,9 +86,12 @@ Además de los elementos de metadatos anteriores se suman estos otros específic
 
 # Descripción detallada de los elementos de metadatos
 
-## Identificador del fichero de metadatos
-**Propiedad:** `gmd:fileIdentifier`
+## Identificador del fichero de metadatos 
+
+**Propiedad** (`gmd:fileIdentifier`)
+
 **Ruta:** `gmd:MD_Metadata/gmd:fileIdentifier`
+
 **Descripción:** Identificador único del fichero de metadatos.
 
 - Es un texto libre.
