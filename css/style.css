@@ -1,192 +1,141 @@
 
-    html {
-	  scroll-behavior: smooth;
-	}
+/* Inicialización básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Variables con los colores de tu paleta */
+:root {
+    --color-bg-main: #F2EBDD;        /* Fondo general: Crema */
+    --color-container-bg: #022241; /* Bloque principal: Azul noche profundo (90% opacidad) */
+    --color-text-title: #F2EBDD;    /* Título: Azul pastel claro helado */
+    --color-text-body: #F2EBDD;     /* Textos: Blanco para máxima lectura sobre azul oscuro */
     
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      display: flex;
-      min-height: 100vh;
-    }
+    /* Botón con el verde de acento solicitado */
+    --color-btn-accent: #003333;     /* Botón principal: Verde Pino / Deep Teal */
+    --color-btn-text: #F2EBDD;       /* Texto del botón: Crema para contrastar */
+    --color-btn-hover: #6699CC;      /* Hover del botón: Azul Medio interactivo */
+}
 
-    aside {
-      width: 25rem;
-      background-color: #4a628f;
-      color: white;
-      padding: 1rem;
-      position: fixed;
-      height: 100vh;
-      overflow-y: auto;
-    }
-	
-	.menu-buttons {
-	  display: flex;
-	  flex-direction: column; 
-	  align-items: flex-start; 
-	  padding-left: 0.25rem; 
-	  margin-top: 1rem;
-	}
+body {
+    background-color: var(--color-bg-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
 
-	.menu-buttons .menu-btn {
-	  width: calc(100% - 0.25rem);
-	  margin-bottom: 0.5rem; 
-	  background-color: #022241;
-	  margin: 1rem 0 0 0;
-	  padding: 1rem;
-	  width: 100%;
-	  border: none;
-	  cursor: pointer;
-	  color: white;
-	  border-radius: 0.4rem;
-	  font-weight: bold;
-	  position: sticky;
-	  bottom: 1rem;
-	}
-	
-	.menu-buttons .menu-btn:hover {
-	  background-color: rgba(255, 255, 255, 0.1);
-	}
+/* Contenedor principal de la sección */
+.location-section {
+    background-color: var(--color-container-bg);
+    backdrop-filter: blur(1rem);     /* Efecto esmerilado que aprovecha la opacidad del azul */
+    width: 100%;
+    max-width: 110rem;
+    padding: 6rem 4rem;
+    border-radius: 1.6rem;             /* Bordes suavizados modernos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1.5rem 3.5rem rgba(2, 34, 65, 0.2); /* Sombra sutil con base azul */
+}
 
-    aside h2 {
-      font-size: 1.4rem; 
-	  font-weight: bold;
-	  color: #000000; 
-	  background-color: rgba(255, 255, 255, 0.1); 
-	  padding: 0.5rem;
-      border-radius: 0.4rem;
-	  padding-bottom: 0.5rem;
-    }
+/* Título de la sección */
+.section-title {
+    color: var(--color-text-title);
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    text-align: center;
+    letter-spacing: 0.05rem;
+}
 
-    aside nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 0.5rem 0;
-      font-size: 0.95rem;
-	  padding: 0.5rem 0.75rem;
-	  border-radius: 0.4rem;
-	  transition: background-color 0.2s ease;
-    }
+/* Contenedor de la cuadrícula de tarjetas */
+.cards-container {
+    display: flex;
+    gap: 3.2rem;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5rem;
+}
 
-    aside nav a:hover {
-      text-decoration: underline;
-	  background-color: rgba(255, 255, 255, 0.1); 
-	  color: #fff;
-    }
-	
-	aside nav a:target,
-	aside nav a.active {
-	  background-color: rgba(255, 255, 255, 0.3);
-	  font-weight: bold;
-	}
+/* Estructura de cada tarjeta */
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;  
+    text-align: center;
+    justify-content: center;
 
-    main {
-      margin-left: 26rem;
-      padding: 2rem;
-      flex: 1;
-      background: #f8f8f8;
-    }
+    position: relative; 
+    padding-top: 2.5rem;
+}
 
-    section {
-      margin-bottom: 3rem;
-    }
+/* Clase para la imagen flotante */
+.card-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8rem;          /* Ajusta el tamaño de la imagen flotante aquí */
+    height: 8rem;
+    object-fit: contain;
+    z-index: 10;          /* Asegura que quede siempre por encima de cualquier otro elemento */
+    
+    /* Opcional: Si es un icono monocromático, puedes teñirlo con tu azul claro */
+    filter: drop-shadow(0 0.2rem 0.8rem rgba(0,0,0,0.2)); 
+}
 
-    h1, h2, h3 {
-      color: #1a232e;
-    }
-	a {
-	  color: inherit;          
-	  text-decoration: underline; 
-	}
+/* Marco para las imágenes */
+.card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
+    background-color: #F2EBDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-	a:hover,
-	a:visited,
-	a:focus {
-	  color: inherit;          
-	  text-decoration: underline; 
-	}
-	
-	a:hover {
-	  font-style: italic;
-	}
+.card-image {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
+/* Efecto visual al pasar el cursor sobre la foto */
+.card-image-wrapper:hover .card-image {
+    transform: scale(1.06);
+}
 
-    table, th, td {
-      border: 0.1rem solid #ccc;
-    }
+/* Bloques de texto explicativos */
+.card-text {
+    color: var(--color-text-body);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: center;
+}
 
-    th, td {
-      padding: 0.75rem;
-      text-align: left;
+/* Diseño adaptativo para dispositivos móviles */
+@media (max-width: 76.8rem) {
+    .cards-container {
+        flex-direction: column;
+        gap: 4rem;
     }
-
-    th {
-      background-color: #ecf0f1;
+    .location-section {
+        padding: 4rem 2rem;
+        border-radius: 0; /* Ocupa pantalla completa en móviles si se prefiere */
     }
-	
-	pre {
-      background-color: #f4f4f4;
-      border: 0.1rem solid #ccc;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      overflow-x: auto;
-      font-family: monospace;
+    .section-title {
+        font-size: 1.8rem;
     }
-
-    a.prop-link {
-      color: #2980b9;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #999;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
-    }
-
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 2rem;
-      border: 0.1rem solid #888;
-      width: 60%;
-      box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
-      border-radius: 0.8rem;
-    }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-	
-
-    @media screen and (max-width: 76.8rem) {
-      aside {
-        display: none;
-      }
-      main {
-        margin-left: 0;
-      }
-    }
+}

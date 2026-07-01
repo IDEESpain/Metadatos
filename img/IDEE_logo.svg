@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 138 79.2">
+  <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #F2EBDD;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #F2EBDD;
+        stroke-miterlimit: 10;
+        stroke-width: .8px;
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_14);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_14" data-name="Degradado sin nombre 14" x1="17.1" y1="20.8" x2="118" y2="57.5" gradientTransform="translate(0 80.3) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F2EBDD"/>
+      <stop offset="0" stop-color="#F2EBDD" stop-opacity="1"/>
+      <stop offset=".2" stop-color="#F2EBDD" stop-opacity=".9"/>
+      <stop offset=".4" stop-color="#F2EBDD" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#F2EBDD" stop-opacity=".7"/>
+      <stop offset=".7" stop-color="#F2EBDD" stop-opacity=".5"/>
+      <stop offset=".8" stop-color="#F2EBDD" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#F2EBDD" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F2EBDD" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path class="st2" d="M103.5,14.1c-10.8,0-24.1,2.5-37.1,6.3-30.4,8.9-52.7,24.8-49.5,35.4,1.5,5,8.5,8.1,19.9,8.8,11.5.6,26.1-1.4,40.9-5.8,20.3-6,37-15,44.9-23.5v.4c-8.1,8.8-24.2,18.1-44.6,24.1-13.2,3.9-26.1,5.9-36.9,5.9s-2.9,0-4.3-.1c-11.8-.6-19.2-4-20.8-9.5-3.3-11.1,19.3-27.5,50.2-36.6,14.9-4.4,29.5-6.4,41.2-5.8.7,0,1.5,0,2.2.1,0,0-4.5.3-6,.3h0Z"/>
+  <g>
+    <path class="st0" d="M25.3,55.7v-24.8h6v24.8h-6Z"/>
+    <path class="st0" d="M59.6,43.2c0,2.2-.4,4-1.2,5.6-.8,1.6-1.9,2.9-3.2,3.9s-2.8,1.8-4.5,2.2c-1.7.5-3.3.7-5,.7h-9.2v-24.8h9c1.8,0,3.5.2,5.2.6s3.2,1.1,4.5,2c1.3,1,2.4,2.2,3.2,3.8s1.2,3.5,1.2,5.9h0ZM53.3,43.2c0-1.4-.2-2.6-.7-3.5-.5-.9-1.1-1.7-1.8-2.2s-1.6-.9-2.6-1.2-2-.3-3-.3h-3v14.5h2.8c1.1,0,2.1-.1,3.1-.4,1-.2,1.9-.7,2.6-1.2s1.4-1.3,1.8-2.2c.5-.9.7-2.1.7-3.5h0Z"/>
+    <path class="st0" d="M63.5,55.7v-24.8h16.7v5h-10.9v4.7h10.3v4.8h-10.3v5.2h11.5v5.1h-17.3Z"/>
+    <path class="st0" d="M84.8,55.7v-24.8h16.7v5h-10.9v4.7h10.3v4.8h-10.3v5.2h11.5v5.1h-17.3Z"/>
+  </g>
+  <polyline class="st1" points="109.8 18.6 110.2 16.2 114.1 23.1 122 21.8 116.6 27.7 120.3 34.8 113 31.5 107.4 37.2 108.3 29.2 101.2 25.7 109 24.1 109.8 18.6"/>
+</svg>
