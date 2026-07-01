@@ -19,7 +19,6 @@
 		<li><a href="#metadatos">Metadatos</a>
 			<ul>
 				<li><a href="#DSSRV">Datos</a></li>
-				<li><a href="#INTER">Interoperabilidad</a></li>
 				<li><a href="#SRV">Servicios</a></li>
 			</ul>
 		</li>
@@ -245,52 +244,7 @@
 	<ul class="MDtable">
 	  <li>Veáse tabla en el Reglamento de metadatos, <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=8" target="_blank">aquí</a></li>
 	</ul>
-    <h3 id="INTER">Elementos de metadatos de interooperabilidad</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Propiedad</th>
-          <th>Dominio</th>
-          <th>Cardinalidad</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-		<tr>
-          <td><a class="prop-link" onclick="openModal('modalRefSystem')">gmd:referenceSystemInfo</a></td>
-          <td>
-			<p><a href="http://www.opengis.net/def/crs/EPSG/0" target="_blank">EPSG</a></p>
-			<p>Texto libre</p>
-		  </td>
-          <td>
-			<p>1..*(Conjuntos de Datos y Series) No aplicable a servicios.</p>
-			<p>0..* (Obligatorio si el conjunto de datos espaciales contiene información temporal) No aplicable a servicios.</p>
-		  </td>
-          <td>
-			<p>Sistema de referencia por coordenadas.</p>
-			<p>Sistema de referencia temporal.</p>
-		  </td>
-        </tr>
-		<tr>
-          <td><a class="prop-link" onclick="openModal('modalCod')">gmd:MD_Format</a></td>
-          <td>Texto libre</td>
-          <td>1..* (Conjuntos de Datos y Series) No aplicable a servicios.</td>
-          <td>Codificación</td>
-        </tr>
-        <tr>
-          <td><a class="prop-link" onclick="openModal('modalTopology')">gmd:DQ_TopologicalConsistency</a></td>
-          <td>Texto libre</td>
-          <td>0..* (Conjuntos de Datos y Series) No aplicable a servicios.</td>
-          <td>Consistencia topológica</td>
-        </tr>
-		<tr>
-          <td><a class="prop-link" onclick="openModal('modalUTF')">gmd:characterSet</a></td>
-          <td><a href="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" target="_blank">Lista controlada</a></td>
-          <td>0..* (Conjuntos de Datos y Series) No aplicable a servicios.</td>
-          <td>Estándar de codificación de caracteres</td>
-        </tr>
-      </tbody>
-    </table>
+    
 	<h3 id="SRV">Elementos de metadatos específicos para los servicios</h3>
     <table>
       <thead>
@@ -317,35 +271,38 @@
         </tr>
 
 		<tr>
-          <td><a class="prop-link" onclick="openModal('modalServiceVersion')">srv:serviceTypeVersion</a></td>
-          <td>Texto libre</td>
-          <td>0...* (Opcional)</td>
           <td>Versión del servicio</td>
+          <td>Texto libre</td>
+          <td>0..* (Opcional)</td>
+		  <td><a class="prop-link" onclick="openModal('modalServiceVersion')">srv:serviceTypeVersion</a></td>
         </tr>
+
 		<tr>
-          <td><a class="prop-link" onclick="openModal('modalOperations')">srv:containsOperations</a></td>
-          <td>
-			<p>Nombre de la operación</p>
-			<p>Protocolo <a href="http://inspire.ec.europa.eu/metadata-codelist/ProtocolValue" target="_blank">(Lista controlada)</a></p>
-			<p>URL del servicio</p>
-		  </td>
-          <td>0...* (opcional)</td>
           <td>Operaciones del tipo de servicio</td>
+		  <td>Nombre de operación / protocolo / URL</td>
+          <td>0..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalOperations')">srv:containsOperations</a></td>
         </tr>
+
         <tr>
-          <td><a class="prop-link" onclick="openModal('modalCoupling')">SV_CoupledResource</a></td>
-          <td>Identificador del recurso</td>
-          <td>0...* (opcional)</td>
           <td>Recurso acoplado</td>
+          <td>Identificador del recurso</td>
+          <td>0..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalCoupling')">SV_CoupledResource</a></td>
         </tr>
+
 		<tr>
-          <td><a class="prop-link" onclick="openModal('modalOperaOn')">srv:operatesOn</a></td>
-          <td>URL</td>
-          <td>0...* (opcional)</td>
           <td>Opera en</td>
+          <td>URL</td>
+          <td>0..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalOperaOn')">srv:operatesOn</a></td>
         </tr>
+
       </tbody>
     </table>
+	<ul class="MDtable">
+	  <li>Veáse tabla en el Reglamento de metadatos, <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=9" target="_blank">aquí</a></li>
+	</ul>
   </section>
 
   <footer>
