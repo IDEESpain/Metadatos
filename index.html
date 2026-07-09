@@ -9,6 +9,9 @@
 <body>
 
 <aside>
+  <div class="logo-container">
+  	<img src="img/IDEE_logo.svg" alt="IDEE" class="logo-lateral">
+  </div>
   <h2 class="MenuTlt">Guía de Metadatos</h2>
   <nav>
 	<ul>
@@ -25,9 +28,9 @@
 	</ul>
   </nav>
   <div class="menu-buttons">
-		<button class="menu-btn">Guía en PDF</button>
-		<button class="menu-btn" onclick="">Validador INSPIRE</button>
-		<button class="menu-btn">RTransformer</button>
+		<a class="menu-btn" href=doc/Guia_Elementos de metadatosINSPIRE_HVD y servicios.pdf target="_blank" rel="noopener noreferrer">Guía en PDF</a>
+		<a class="menu-btn" href=https://inspire.ec.europa.eu/validator/test-selection/index.html target="_blank" rel="noopener noreferrer">Validador INSPIRE</a>
+		<a class="menu-btn" href=https://iso2geodcat.idee.es/rtransformer target="_blank" rel="noopener noreferrer">RTransformer</a>
   </div>
 	
   <div class="logo-container">
@@ -242,7 +245,7 @@
       </tbody>
     </table>
 	<ul class="MDtable">
-	  <li>Veáse tabla en el Reglamento de metadatos, <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=8" target="_blank">aquí</a></li>
+	  <li><em>Veáse tabla en el Reglamento de metadatos, <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=8" target="_blank">aquí</a></em></li>
 	</ul>
     
 	<h3 id="SRV">Elementos de metadatos específicos para los servicios</h3>
@@ -317,7 +320,7 @@
     <span class="close" onclick="closeModal('modalIdMD')">&times;</span>
     <h2>Identificador del fichero de metadatos</h2>
 	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:fileIdentifier</p>
-    <p><strong>Descripción Identificador único del fichero de metadatos.</strong>
+    <p><strong>Descripción: </strong>Identificador único del fichero de metadatos.
 		<tr>
 			<td>Es un texto libre.</td>
 			<td>La unicidad puede completarse:
@@ -350,13 +353,14 @@
 			</p>
 		</tr>
 	</p>
-    <p><strong>Ejemplo:</strong>«español» se seleccionaría «spa»
-		<pre><code class="ejemplos">
-			&lt;gmd:language&gt;
-				  &lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa">Español&lt;/gmd:LanguageCode&gt;
-			&lt;/gmd:language&gt;
-		</code></pre>
-	</p>
+    <p><strong>Ejemplo:</strong>«español» se seleccionaría «spa»</p>
+	<div class="modal-example">
+			<pre><code class="ejemplos">
+				&lt;gmd:language&gt;
+					&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa">Español&lt;/gmd:LanguageCode&gt;
+				&lt;/gmd:language&gt;
+			</code></pre>
+	</div>
   </div>
 </div>
 <div id="modalUTF" class="modal">

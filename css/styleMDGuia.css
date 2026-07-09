@@ -33,11 +33,10 @@ aside {
 }
 
 .logo-container {
-    margin-top: auto; /* empuja el logo hacia abajo */
+    
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
-
 
 .logo-lateral {
     fill: #F2EBDD;
@@ -45,7 +44,6 @@ aside {
     height: auto;
 
 }
-
 
 .MenuTlt {
   color: #F2EBDD; 
@@ -69,8 +67,10 @@ aside {
 	  color: #F2EBDD; 
 	  border-radius: 0.4rem;
 	  font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 	}
-	
+
 	.menu-buttons .menu-btn:hover {
 	  background-color: #022241E6;
     color: #F2EBDD; 
@@ -82,8 +82,6 @@ aside {
 	  color: #000000; 
 	  background-color: #022241E6;
 	  padding: 0.5rem;
-    border-radius: 0.4rem;
-	  padding-bottom: 0.5rem;
     }
 
     aside ul {
@@ -184,6 +182,10 @@ aside {
       cursor: pointer;
     }
 
+    .MDtable {
+      padding: 1.1rem;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -221,9 +223,20 @@ aside {
       margin-bottom: 1.2rem;
     }
 
+    .modal-example pre{
+      background-color: #92a7bd;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      overflow-x: auto;
+    }
+
     .ejemplos{
-      font-style: italic;
-      font-size: 0.9rem;
+      display: block;
+      font-family: "Google Sans Code", monospace;
+      font-size: 0.95rem;
+      background-color: #92a7bd;
+      padding: 1rem;
+      border-radius: 0.4rem;
     }
 
     .close {
