@@ -1,0 +1,257 @@
+
+/* Inicialización básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+}
+html {
+	  scroll-behavior: smooth;
+}
+    
+body {
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #FAF8F5; 
+}
+    
+
+aside {
+      width: 20rem;
+      background-color: #022241;
+      color: #F2EBDD; 
+      padding: 2rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+
+}
+
+.logo-container {
+    
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.logo-lateral {
+    fill: #F2EBDD;
+    width: 14rem; /* ajusta el tamaño */
+    height: auto;
+
+}
+
+.MenuTlt {
+  color: #F2EBDD; 
+}
+	
+	.menu-buttons {
+	  display: flex;
+	  flex-direction: column; 
+	  align-items: center; 
+    margin-top: 1.4rem;
+	}
+
+	.menu-buttons .menu-btn {
+	  width: 70%;
+	  margin-bottom: 0.8rem; 
+	  background-color: #92a7bd;
+	  margin: 0.8rem 0 0 0;
+	  padding: 0.8rem;
+	  border: none;
+	  cursor: pointer;
+	  color: #F2EBDD; 
+	  border-radius: 0.4rem;
+	  font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+	}
+
+	.menu-buttons .menu-btn:hover {
+	  background-color: #022241E6;
+    color: #F2EBDD; 
+	}
+
+    aside h2 {
+    font-size: 1.6rem; 
+	  font-weight: bold;
+	  color: #000000; 
+	  background-color: #022241E6;
+	  padding: 0.5rem;
+    }
+
+    aside ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul ul {
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+
+    }
+
+
+    aside nav a {
+      display: block;
+      color: #F2EBDD;
+      text-decoration: none;
+      margin: 0.5rem 0;
+	    padding: 0.5rem 0.75rem;
+	    border-radius: 0.4rem;
+	    transition: background-color 0.2s ease;
+    }
+
+    aside nav a:hover {
+    width: 80%;
+	  color: #F2EBDD;
+    font-weight: bold;
+    }
+	
+	aside nav a:target,
+	aside nav a.active {
+	  background-color: rgba(255, 255, 255, 0.3);
+	  font-weight: bold;
+	}
+
+  main {
+      margin-left: 26rem;
+      padding: 2rem;
+      flex: 1;
+      background: #FAF8F5;
+    }
+
+  section {
+      margin-bottom: 2rem;
+    }
+
+  h1, h2, h3 {
+      color: #1a232e;
+      margin-bottom: 1.8rem;
+      margin-top: 1.8rem;
+    }
+	a {
+	  color: inherit;          
+	  text-decoration: underline; 
+	}
+
+	a:hover,
+	a:visited,
+	a:focus {
+	  color: inherit;          
+	}
+
+  main section ul {
+        padding-left: 1.0rem;
+    }
+	
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table, th, td {
+      border: 0.1rem solid #F2EBDD;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #FAF8F5;
+    }
+	
+	pre {
+      background-color: #FAF8F5;
+      border: 0.1rem solid #FAF8F5;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+
+    a.prop-link {
+      color: #6699CC;
+      cursor: pointer;
+    }
+
+    .MDtable {
+      padding: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #FAF8F5;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #FAF8F5;
+      margin: 10% auto;
+      padding: 2rem;
+      border: 0.1rem solid #f0eae2;
+      width: 60%;
+      box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
+      border-radius: 0.8rem;
+    }
+
+    .modal-content p {
+      margin-bottom: 1.2rem;
+    }
+
+    .modal-content p {
+      margin-bottom: 1.2rem;
+    }
+
+    .modal-example pre{
+      background-color: #92a7bd;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      overflow-x: auto;
+    }
+
+    .ejemplos{
+      display: block;
+      font-family: "Google Sans Code", monospace;
+      font-size: 0.95rem;
+      background-color: #92a7bd;
+      padding: 1rem;
+      border-radius: 0.4rem;
+    }
+
+    .close {
+      color: #022241; 
+      float: right;
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+	
+
+    @media screen and (max-width: 76.8rem) {
+      aside {
+        display: none;
+      }
+      main {
+        margin-left: 0;
+      }
+    }

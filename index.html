@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guía de Metadatos</title>
+  <link rel="stylesheet" href="css/styleMDGuia.css">
+</head>
+<body>
+
+<aside>
+  <div class="logo-container">
+  	<img src="img/IDEE_logo.svg" alt="IDEE" class="logo-lateral">
+  </div>
+  <h2 class="MenuTlt">Guía de Metadatos</h2>
+  <nav>
+	<ul>
+		<li><a href="#abstract">Abstract</a></li>
+		<li><a href="#introduccion">Introducción</a></li>
+		<li><a href="#contexto">Contexto</a></li>
+		<li><a href="#historial">Historial</a></li>
+		<li><a href="#metadatos">Metadatos</a>
+			<ul>
+				<li><a href="#DSSRV">Datos</a></li>
+				<li><a href="#SRV">Servicios</a></li>
+			</ul>
+		</li>
+	</ul>
+  </nav>
+  <div class="menu-buttons">
+		<a class="menu-btn" href="doc/Guia_Metadatos.pdf" target="_blank" rel="noopener noreferrer">Guía en PDF</a>
+		<a class="menu-btn" href=http://validador.idee.es target="_blank" rel="noopener noreferrer">Validador INSPIRE</a>
+		<a class="menu-btn" href=https://iso2geodcat.idee.es/rtransformer target="_blank" rel="noopener noreferrer">RTransformer</a>
+  </div>
+</aside>
+
+<main>
+  <h1>Metadatos de conjuntos de datos espaciales de alto valor y servicios espaciales</h1>
+
+  <section id="abstract">
+    <h2>Objetivo</h2>  
+	<p>
+	Descripción de los elementos mínimos de metadatos definidos en las normas internacionales ISO 19115 e ISO 19119, que cubren los requisitos establecidos en el
+	<a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF" target="_blank">
+		Reglamento (CE) n.º 1205/2008
+	</a>
+	relativos a los metadatos necesarios para describir:
+	</p>
+	
+	<ul>
+		<li>Conjuntos de datos espaciales.</li>
+		<li>Series de conjuntos de datos espaciales.</li>
+		<li>Servicios de datos espaciales.</li>
+	</ul>
+	
+  </section>
+
+  <section id="contexto">
+    <h2>Contexto normativo</h2>
+	<ul>
+	  <li><a href="https://www.boe.es/doue/2007/108/L00001-00014.pdf" target="_blank">Directiva Inspire 2007/2/CE1</a> establece las reglas generales para la formación de una Infraestructura de Datos Espaciales en la Comunidad Europea.</li>
+	  <li><a href="https://www.boe.es/eli/es/l/2010/07/05/14/dof/spa/pdf" target="_blank">Ley 14/2010,</a> de 5 de julio, sobre las infraestructuras y los servicios de información geográfica en España (LISIGE).</li>
+	  <li><a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF" target="_blank">Reglamento (CE) No 1205/2008</a> en lo que se refiere a los metadatos.</li>
+	  <li>Corrección de errores del Reglamento (CE) Nº 1205/2008.</li>
+	  <li>Directrices Técnicas sobre metadatos: <a href="https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en" target="_blank">Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007</a></li>
+	</ul>
+  </section>
+
+  <section id="metadatos">
+    <h2>Elementos de metadatos</h2>
+
+    <h3 id="DSSRV">Metadatos para conjuntos de datos y series espaciales</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Descripción</th>
+          <th>Dominio</th>
+          <th>Cardinalidad</th>
+          <th>Propiedad</th>
+        </tr>
+      </thead>
+      <tbody>
+	    <tr>
+          <td>Identificador único del registro de metadatos</td>
+          <td>Texto libre</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalIdMD')">gmd:fileIdentifier</a></td>
+        </tr>
+
+		<tr>
+          <td>Idioma empleado en los metadatos</td>
+          <td>ISO 639-2 (3 letras)</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalLangMD')">gmd:language</a></td>
+          
+        </tr>
+
+		<tr>
+		  <td>Tipo de recurso descrito por los metadatos</td>
+          <td>Lista controlada</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalHierarchy')">gmd:hierarchyLevel</a></td>
+        </tr>
+
+		<tr>
+          <td>Punto de contacto responsable de los metadatos</td>
+          <td>
+			  <p>Organización, dirección y rol</p>
+		  </td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalcontact')">gmd:contact</a></td>
+        </tr>
+
+		<tr>
+		  <td>Fecha de creación o actualización de los metadatos</td>
+          <td>ISO 8601</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalFechaMD')">gmd:dateStamp</a></td>
+        </tr>
+
+		<tr>
+          <td>Nombre de la norma de metadatos utilizada</td>
+          <td>Texto libre</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalNormaMD')">gmd:metadataStandardName</a></td>
+        </tr>
+
+		<tr>
+          <td>Versión de la norma de metadatos utilizada</td>
+          <td>Texto libre</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalVersionMD')">gmd:metadataStandardVersion</a></td>
+        </tr>
+
+        <tr>
+          <td>Título del recurso</td>
+          <td>Texto libre</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalTitle')">gmd:title</a></td>
+        </tr>
+
+        <tr>
+          <td>Descripción resumida del recurso</td>
+          <td>Texto libre</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalDescription')">gmd:abstract</a></td>
+        </tr>
+
+		<tr>
+          <td>Punto(s) de contacto del recurso</td>
+          <td>Texto libre/ lista controlada</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalpointOfContact')">gmd:pointOfContact</a></td>
+        </tr>
+
+		<tr>
+          <td>Fechas relevantes asociadas al recurso</td>
+          <td>ISO 8601 / lista controlada</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalDate')">gmd:date</a></td>
+        </tr>
+
+		<tr>
+          <td>Identificador único del recurso</td>
+          <td>Texto libre</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalID')">gmd:MD_Identifier</a></td>
+        </tr>
+
+		<tr>
+          <td>Palabras clave asociadas al recurso</td>
+          <td>Texto libre / vocabularios controlados</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalkeyword')">gmd:MD_Keywords</a></td>
+        </tr>
+
+		<tr>
+          <td>Restricciones en el acceso y uso</td>
+          <td>Lista controlada</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalRestrictions')">gmd:MD_LegalConstraints</a></td>
+        </tr>
+
+		<tr>
+          <td>Escala o resolución espacial</td>
+          <td>Entero o decimal</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalResolution')">gmd:MD_Resolution</a></td>
+        </tr>
+
+		<tr>
+          <td>Idioma(s) del recurso</td>
+          <td>ISO 639-2</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalLangData')">gmd:MD_DataIdentification/gmd:language</a></td>
+        </tr>
+
+		<tr>
+		  <td>Categoría temática del recurso</td>
+          <td>Lista controlada</td>
+          <td>1..*</td>
+          <td><a class="prop-link" onclick="openModal('modalTopic')">gmd:topicCategory</a></td>
+        </tr>
+
+		<tr>
+          <td>Extensión o localización geográfica</td>
+          <td>Bounding Box</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalextent')">gmd:EX_Extent</a></td>
+        </tr>
+
+		<tr>
+          <td>Formato de distribución del recurso</td>
+		  <td>Texto libre / lista controlada</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalFormat')">gmd:MD_Format</a></td>
+        </tr>
+		
+		<tr>
+		  <td>Recurso en línea para acceso o descarga</td>
+          <td>URL</td>
+          <td>1..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalonLine')">gmd:CI_OnlineResource</a></td>
+        </tr>
+
+		<tr>
+		  <td>Alcance del recurso</td>
+          <td>Lista controlada</td>
+          <td>1</td>
+          <td><a class="prop-link" onclick="openModal('modalscope')">gmd:scope</a></td>
+        </tr>
+		
+		<tr>
+          <td>Linaje y descripción de la calidad del recurso</td>
+          <td>Texto libre</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modallinaje')">gmd:LI_Lineage</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+	<ul class="MDtable">
+	  <li><em>Veáse tabla en el Reglamento de metadatos, <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=8" target="_blank">aquí</a></em></li>
+	</ul>
+    
+	<h3 id="SRV">Elementos de metadatos específicos para los servicios</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Descripción</th>
+          <th>Dominio</th>
+          <th>Cardinalidad</th>
+		  <th>Propiedad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+		  <td>Tipo de Servicio</td>
+          <td>Lista controlada</td>
+          <td>1</td>
+          <td><a class="prop-link" onclick="openModal('modalServiceType')">srv:serviceType</a></td>
+        </tr>
+
+		<tr>
+		  <td>Tipo del recurso acoplado</td>
+          <td>Lista controlada</td>
+          <td>1</td>
+		  <td><a class="prop-link" onclick="openModal('modalCouplingType')">srv:couplingType</a></td>
+        </tr>
+
+		<tr>
+          <td>Versión del servicio</td>
+          <td>Texto libre</td>
+          <td>0..* (Opcional)</td>
+		  <td><a class="prop-link" onclick="openModal('modalServiceVersion')">srv:serviceTypeVersion</a></td>
+        </tr>
+
+		<tr>
+          <td>Operaciones del tipo de servicio</td>
+		  <td>Nombre de operación / protocolo / URL</td>
+          <td>0..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalOperations')">srv:containsOperations</a></td>
+        </tr>
+
+        <tr>
+          <td>Recurso acoplado</td>
+          <td>Identificador del recurso</td>
+          <td>0..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalCoupling')">SV_CoupledResource</a></td>
+        </tr>
+
+		<tr>
+          <td>Opera en</td>
+          <td>URL</td>
+          <td>0..*</td>
+		  <td><a class="prop-link" onclick="openModal('modalOperaOn')">srv:operatesOn</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+	<ul class="MDtable">
+	  <li><em>Veáse tabla en el Reglamento de metadatos, <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:ES:PDF#page=9" target="_blank">aquí</em></a></li>
+	</ul>
+  </section>
+
+  <footer>
+    <p>CC-BY 4.0 2025 O.A. Centro Nacional de Información Geográfica</p>
+  </footer>
+</main>
+
+<!-- Modales -->
+
+<div id="modalIdMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalIdMD')">&times;</span>
+    <h2>Identificador del fichero de metadatos</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:fileIdentifier</p>
+    <p><strong>Descripción: </strong>Identificador único del fichero de metadatos.
+		<tr>
+			<td>Es un texto libre.</td>
+			<td>La unicidad puede completarse:
+				<p>Utilizando el Identificador Único Universal (UUID) que se presenta en 5 grupos separados por guiones, en la forma 8-4-4-4-12 para un total de 36 caracteres (32 caracteres hexadecimales y 4 guiones), xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxx. e.g: 123e4567-e89b-12d3-a456-426655440000.</p>
+				<p>GeoNetwork asigna por defecto un UUID al elemento fileIdentifier.</p>
+				<p>En el caso de crear los metadatos con otra herramienta o de forma manual se incluye los identificadores de los ficheros manualmente y suele seguir el siguiente criterio: country_producer_product_theme</p>
+			</td>
+			<td>Nota: No usar el identificador para describir el recurso, no es necesario incluir fechas.</td>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			gmd:fileIdentifier&gt;
+				  &lt;gco:CharacterString>spaignLLM&lt;/gco:CharacterString&gt;
+			gmd:fileIdentifier&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+
+<div id="modalLangMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalLangMD')">&times;</span>
+    <h2>gmd:language</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:language</p>
+    <p><strong>Descripción: Idioma del fichero de metadatos.</strong>
+		<tr>
+			<p>Lista controlada de la ISO 639.</p>
+			<p>Un fichero de metadatos no puede soportar más de un elemento de idioma de los metadatos, para la declaración de otros idiomas de metadatos se utiliza <i>locale</i>.
+			</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>«español» se seleccionaría «spa»</p>
+	<div class="modal-example">
+			<pre><code class="ejemplos">
+				&lt;gmd:language&gt;
+					&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa">Español&lt;/gmd:LanguageCode&gt;
+				&lt;/gmd:language&gt;
+			</code></pre>
+	</div>
+  </div>
+</div>
+<div id="modalUTF" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalUTF')">&times;</span>
+    <h2>gmd:characterSet</h2>
+	<p><strong>Ruta: </strong>gmd:MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet</p>
+    <p><strong>Descripción: Codificación de caracteres utilizada en el conjunto de datos.</strong>
+		<tr>
+			<p>Lista controlada de la ISO 639.</p>
+			<p>Obligatorio si se utiliza una codificación no basada en UTF-8.
+			</p>
+			<p>Se selecciona un valor de la siguiente lista: https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:characterSet&gt;
+				  &lt;gmd:MD_CharacterSetCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode"
+                                     codeListValue="utf8"/&gt;
+			&lt;/gmd:characterSet&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalHierarchy" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalHierarchy')">&times;</span>
+    <h2>gmd:hierarchyLevel</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:hierarchyLevel</p>
+    <p><strong>Descripción: Tipo de recurso</strong>
+		<tr>
+			<p>Lista controlada https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode</p>
+			<p>Nota: se revisa el valor de la lista controlada no el texto libre.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:hierarchyLevel&gt;
+				  &lt;gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode"
+                        codeListValue="dataset"&gt;Conjunto de datos&lt;/gmd:MD_ScopeCode&gt;
+			&lt;/gmd:hierarchyLevel&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalcontact" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalcontact')">&times;</span>
+    <h2>gmd:contact</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:contact</p>
+    <p><strong>Descripción: Organización responsable de la creación y el mantenimiento de los metadatos.</strong>
+		<tr>
+			<p>Mínima información:
+				<p>- Nombre de la organización (gmd:organisationName): texto libre.</p>
+				<p>- Dirección de correo electrónico de contacto (gmd:contactInfo/gmd:address): texto libre.</p>
+				<p>- Función (gmd:role/CI_RoleCode): lista controlada https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode.</p>
+			</p>
+			<p>Nota: Se revisa el valor de la lista controlada no el texto libre.En INSPIRE obligatorio rol "Punto de Contacto"</p>
+			<p>Nota: En INSPIRE obligatorio rol "Punto de Contacto".</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+			<pre><code class="ejemplos">
+				&lt;gmd:contact&gt;
+					&lt;gmd:CI_ResponsibleParty&gt;
+						&lt;gmd:organisationName&gt;
+							&lt;gco:CharacterString&gt;Nombre Organización&lt;/gco:CharacterString&gt;
+						&lt;/gmd:organisationName&gt;
+						&lt;gmd:contactInfo&gt;
+							&lt;gmd:CI_Contact&gt;
+								&lt;gmd:address&gt;
+									&lt;gmd:CI_Address&gt;
+										&lt;gmd:electronicMailAddress&gt;
+											&lt;gco:CharacterString&gt;organizacion@contacto.es&lt;/gco:CharacterString&gt;
+										&lt;/gmd:electronicMailAddress&gt;
+									&lt;/gmd:CI_Address&gt;
+								&lt;/gmd:address&gt;
+							&lt;/gmd:CI_Contact&gt;
+						&lt;/gmd:contactInfo&gt;
+						&lt;gmd:role&gt;
+							&lt;gmd:CI_RoleCode 
+								codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"
+								codeListValue="pointOfContact"/&gt;
+						&lt;/gmd:role&gt;
+					&lt;/gmd:CI_ResponsibleParty&gt;
+				&lt;/gmd:contact&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalFechaMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalFechaMD')">&times;</span>
+    <h2>gmd:dateStamp</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:dateStamp</p>
+    <p><strong>Descripción: Fecha de los metadatos.</strong>
+		<tr>
+			<p>Especifica cuándo se creó o actualizó el registro de metadatos.</p>
+			<p>Conforme anorma ISO 8601 (año-mes-día).</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:dateStamp&gt;
+				&lt;gco:Date&gt;2025-11-21&lt;/gco:Date&gt;
+			&lt;/gmd:dateStamp&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalNormaMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalNormaMD')">&times;</span>
+    <h2>gmd:dateStamp</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:metadataStandardName</p>
+    <p><strong>Descripción: Nombre de la norma de metadatos, incluido el nombre del perfil.</strong>
+		<tr>
+			<p>En Europa es oficial el reglamento de Metadatos que es un perfil de la ISO 19115, cuyo esquema de metadatos es la ISO 19139.</p>
+			<p>Se puede usar la ISO 19115-1 y 19115-3 para los casos no regulados por INSPIRE.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:metadataStandardName&gt;
+				&lt;gco:CharacterString&gt;Reglamento (CE) Nº 1205/2008 de INSPIRE&lt;/gco:CharacterString&gt;
+			&lt;/gmd:metadataStandardName&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalVersionMD" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalVersionMD')">&times;</span>
+    <h2>gmd:metadataStandardVersion</h2>
+	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:metadataStandardName</p>
+    <p><strong>Descripción: Versión de la norma de metadatos.</strong>
+		<tr>
+			<p>El CNIG usa TG 2.0 que indica la última versión de Techical Guidelines de INSPIRE.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:metadataStandardVersion&gt;
+				&lt;gco:CharacterString&gt;TG 2.0&lt;/gco:CharacterString&gt;
+			&lt;/gmd:metadataStandardVersion&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalTitle" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalTitle')">&times;</span>
+    <h2>gmd:title</h2>
+	<p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title</p>
+    <p><strong>Descripción: Título del recurso.</strong>
+		<tr>
+			<p>Debe ser conciso y comprensible.</p>
+			<p>Recomendación: <i>Nombre del conjunto de datos + ámbito espacial + resolución</i></p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:title&gt;
+				&lt;gco:CharacterString&gt;Divisiones Administrativas de España&lt;/gco:CharacterString&gt;
+			&lt;/gmd:title&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+
+<div id="modalDescription" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalDescription')">&times;</span>
+    <h2>gmd:abstract</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract</p>
+    <p><strong>Descripción: Resumen del recurso.</strong>
+		<tr>
+			<p>Es breve resumen con los detalles más importantes que resumen los datos o el servicio.</p>
+			<p>Los detalles más importantes de la descripción deben resumirse en la primera frase o en los primeros 256 caracteres.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code class="ejemplos">
+			&lt;gmd:abstract&gt;
+				&lt;gco:CharacterString&gt;
+					Elementos de hidrografía de Asturias compuesto de aguas físicas, tanto naturales como artificiales (cuencas hidrográficas, cursos de agua, lagos, lagunas y embalses, así como algunas construcciones asociadas a la red hidrográfica y puntos de interés hídrico (construcciones hidrográficas)).
+				&lt;/gco:CharacterString&gt;
+			&lt;/gmd:abstract&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalpointOfContact" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalpointOfContact')">&times;</span>
+    <h2>gmd:contact</h2>
+	<p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty</p>
+    <p><strong>Descripción: Organización responsable del recurso.</strong>
+		<tr>
+			<p>Mínima información:
+				<p>- Nombre de la organización (gmd:organisationName): texto libre.</p>
+				<p>- Dirección de correo electrónico de contacto (gmd:contactInfo/gmd:address): texto libre.</p>
+				<p>- Función de la organización (gmd:role/CI_RoleCode): lista controlada https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode.</p>
+			</p>
+			<p>Puede haber varias organizaciones responsables del recurso con diferentes roles.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			<pre><code>
+				&lt;gmd:pointOfContact&gt;
+					&lt;gmd:CI_ResponsibleParty&gt;
+						&lt;gmd:organisationName&gt;
+							&lt;gco:CharacterString&gt;Nombre Organización&lt;/gco:CharacterString&gt;
+						&lt;/gmd:organisationName&gt;
+						&lt;gmd:contactInfo&gt;
+							&lt;gmd:CI_Contact&gt;
+								&lt;gmd:address&gt;
+									&lt;gmd:CI_Address&gt;
+										&lt;gmd:electronicMailAddress&gt;
+											&lt;gco:CharacterString&gt;organizacion@contacto.es&lt;/gco:CharacterString&gt;
+										&lt;/gmd:electronicMailAddress&gt;
+									&lt;/gmd:CI_Address&gt;
+								&lt;/gmd:address&gt;
+							&lt;/gmd:CI_Contact&gt;
+						&lt;/gmd:contactInfo&gt;
+						&lt;gmd:role&gt;
+							&lt;gmd:CI_RoleCode 
+								codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"
+								codeListValue="pointOfContact"/&gt;
+						&lt;/gmd:role&gt;
+					&lt;/gmd:CI_ResponsibleParty&gt;
+				&lt;/gmd:pointOfContact&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalDate" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalDate')">&times;</span>
+    <h2>gmd:date</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date</p>
+    <p><strong>Descripción:Referencias temporales</strong>
+		<tr>
+			<p>Mínimo alguna de estas:</p>
+				<p> - Extensión temporal del recurso descrito</p>
+				<p> - Fecha de publicación del recurso</p>
+				<p> - Fecha de la última revisión del recurso</p>
+				<p> - Fecha de creación del recurso</p>
+			<p>Formato de la norma ISO 8601 (año-mes-día/hora) y lista controlada http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode para las fechas de publicación, creación y revisión</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:date&gt;
+				&lt;gmd:CI_Date&gt;
+					&lt;gmd:date&gt;
+						&lt;gco:Date&gt;2012-01-01&lt;/gco:Date&gt;
+					&lt;/gmd:date&gt;
+					&lt;gmd:dateType&gt;
+						&lt;gmd:CI_DateTypeCode 
+							codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+							codeListValue="creation"/&gt;
+					&lt;/gmd:dateType&gt;
+				&lt;/gmd:CI_Date&gt;
+			&lt;/gmd:date&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalID" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalID')">&times;</span>
+    <h2>gmd:MD_Identifier</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier</p>
+    <p><strong>Descripción: Identificador del recurso</strong>
+		<tr>
+			<p>Debe contener los siguientes elementos:
+				<p>- Code (código del recurso): texto libre.</p>
+				<p>- CodeSpace: (código del espacio de nombres): texto libre.</p>
+			</p>
+			<p>Nota: INSPIRE recomienda no incluir en el espacio de nombres “CodeSpace” siglas y no incluir una URL o URI.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:identifier&gt;
+				&lt;gmd:MD_Identifier&gt;
+					&lt;gmd:code&gt;
+						&lt;gco:CharacterString&gt;BDLJE&lt;/gco:CharacterString&gt;
+					&lt;/gmd:code&gt;
+					&lt;gmd:codeSpace&gt;
+						&lt;gco:CharacterString&gt;IGN&lt;/gco:CharacterString&gt;
+					&lt;/gmd:codeSpace&gt;
+				&lt;/gmd:MD_Identifier&gt;
+			&lt;/gmd:identifier&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalkeyword" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalkeyword')">&times;</span>
+    <h2>gmd:MD_Keywords</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords</p>
+    <p><strong>Descripción: Palabras clave</strong>
+		<tr>
+			<p>Palabras o frases que describen el recurso para que se indexe y pueda ser buscado.</p>
+			<p>Vocabularios controlados, son obligatorias estas 4 listas si aplica en función del recurso:
+				<p>- Tema INSPIRE: Lista controlada http://inspire.ec.europa.eu/theme</p>
+				<p>- Conjuntos de datos prioritarios: Lista controlada http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset</p>
+				<p>- Ámbito espacial: Lista controlada http://inspire.ec.europa.eu/metadata-codelist/SpatialScope</p>
+				<p>- Datos de Alto Valor: Lista controlada http://data.europa.eu/eli/reg_impl/2023/138/oj</p>
+			</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:descriptiveKeywords&gt;
+				&lt;gmd:MD_Keywords&gt;
+					&lt;gmd:keyword&gt;
+						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/au"&gt;Unidades administrativas&lt;/gmx:Anchor&gt;
+					&lt;/gmd:keyword&gt;
+					&lt;gmd:thesaurusName&gt;
+						&lt;gmd:CI_Citation&gt;
+							&lt;gmd:title&gt;
+								&lt;gmx:Anchor xlink:href="https://www.eionet.europa.eu/gemet/inspire_themes"&gt;GEMET - INSPIRE themes, version 1.0&lt;/gmx:Anchor&gt;
+							&lt;/gmd:title&gt;
+							&lt;gmd:date&gt;
+								&lt;gmd:CI_Date&gt;
+									&lt;gmd:date&gt;
+										&lt;gco:Date&gt;2008-06-01&lt;/gco:Date&gt;
+									&lt;/gmd:date&gt;
+									&lt;gmd:dateType&gt;
+										&lt;gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+															 codeListValue="publication"&gt;publication&lt;/gmd:CI_DateTypeCode&gt;
+									&lt;/gmd:dateType&gt;
+								&lt;/gmd:CI_Date&gt;
+							&lt;/gmd:date&gt;
+						&lt;/gmd:CI_Citation&gt;
+					&lt;/gmd:thesaurusName&gt;
+				&lt;/gmd:MD_Keywords&gt;
+			&lt;/gmd:descriptiveKeywords&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalRestrictions" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalRestrictions')">&times;</span>
+    <h2>gmd:abstract</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints</p>
+    <p><strong>Descripción: Restricciones en el acceso y uso del recurso.</strong>
+		<tr>
+				<p>- Restricciones de acceso (gmd:accessConstraints): Restricciones de acceso aplicadas para asegurar la protección de la privacidad o de la propiedad intelectual y cualquier restricción o limitación especial para obtener el recurso o los metadatos.</p>
+				<p>- Restricciones de uso (gmd:useConstraints): Restricciones aplicadas para asegurar la protección de la privacidad o de la propiedad intelectual y cualquier restricción, limitación o advertencia especial para utilizar el recurso o los metadatos</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:resourceConstraints&gt;
+				&lt;gmd:MD_LegalConstraints&gt;
+					&lt;gmd:accessConstraints&gt;
+						&lt;gmd:MD_RestrictionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+												  codeListValue="otherRestrictions"/&gt;
+					&lt;/gmd:accessConstraints&gt;
+					&lt;gmd:otherConstraints&gt;
+						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"&gt;Sin limitaciones al acceso público.&lt;/gmx:Anchor&gt;
+					&lt;/gmd:otherConstraints&gt;
+				&lt;/gmd:MD_LegalConstraints&gt;
+			&lt;/gmd:resourceConstraints&gt;
+			&lt;gmd:resourceConstraints&gt;
+				&lt;gmd:MD_LegalConstraints&gt;
+					&lt;gmd:useConstraints&gt;
+						&lt;gmd:MD_RestrictionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+												  codeListValue="otherRestrictions"/&gt;
+					&lt;/gmd:useConstraints&gt;
+					&lt;gmd:otherConstraints&gt;
+						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;No se aplican condiciones de acceso y uso.&lt;/gmx:Anchor&gt;
+					&lt;/gmd:otherConstraints&gt;
+					&lt;gmd:otherConstraints&gt;
+						&lt;gmx:Anchor xlink:href="https://creativecommons.org/licenses/by/4.0/"&gt;CC-BY 4.0&lt;/gmx:Anchor&gt;
+					&lt;/gmd:otherConstraints&gt;
+				&lt;/gmd:MD_LegalConstraints&gt;
+			&lt;/gmd:resourceConstraints&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalResolution" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalResolution')">&times;</span>
+    <h2>gmd:MD_Resolution</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution</p>
+    <p><strong>Descripción: Resolución espacial</strong>
+		<tr>
+			<p>La escala nominal y/o la resolución espacial del recurso.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo de escala:</strong>
+		<pre><code>
+			&lt;gmd:spatialResolution&gt;
+				&lt;gmd:MD_Resolution&gt;
+					&lt;gmd:equivalentScale&gt;
+						&lt;gmd:MD_RepresentativeFraction&gt;
+							&lt;gmd:denominator&gt;
+								&lt;gco:Integer&gt;25000&lt;/gco:Integer&gt;
+							&lt;/gmd:denominator&gt;
+						&lt;/gmd:MD_RepresentativeFraction&gt;
+					&lt;/gmd:equivalentScale&gt;
+				&lt;/gmd:MD_Resolution&gt;
+			&lt;/gmd:spatialResolution&gt;
+		</code></pre>
+	</p>
+	<p><strong>Ejemplo de resolución:</strong>
+		<pre><code>
+			&lt;gmd:spatialResolution&gt;
+				&lt;gmd:MD_Resolution&gt;
+					&lt;gmd:distance&gt;	
+						&lt;gco:Distance uom="metros"&gt;0.25&lt;/gco:Distance&gt;
+					&lt;/gmd:distance&gt;
+				&lt;/gmd:MD_Resolution&gt;
+			&lt;/gmd:spatialResolution&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalLangData" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalLangData')">&times;</span>
+    <h2>gmd:MD_DataIdentification/gmd:language</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gmd:LanguageCode</p>
+    <p><strong>Descripción: Idioma del recurso</strong>
+		<tr>
+			<p>El idioma y conjunto de caracteres que se utiliza en el recurso, es decir en el producto o en el servicio.</p>
+			<p>Lista controlada de la ISO 639.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:language&gt;
+				&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa"&gt;Español&lt;/gmd:LanguageCode&gt;
+			&lt;/gmd:language&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalTopic" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalTopic')">&times;</span>
+    <h2>gmd:topicCategory</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode</p>
+    <p><strong>Descripción: Categoría del tema del recurso</strong>
+		<tr>
+			<p>Temas del registro INSPIRE: https://inspire.ec.europa.eu/metadata-codelist/TopicCategory</p>
+			<p>Nota: este elemento no se traduce</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:topicCategory&gt;
+				&lt;gmd:MD_TopicCategoryCode&gt;boundaries&lt;/gmd:MD_TopicCategoryCode&gt;
+			&lt;/gmd:topicCategory&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalextent" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalextent')">&times;</span>
+    <h2>gmd:EX_Extent</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent</p>
+    <p><strong>Descripción: Localización geográfica</strong>
+		<tr>
+			<p>Es la extensión del recurso en el espacio geográfico, dada como por un marco geográfico envolvente (BBOX). El cuadro delimitador se expresará con las longitudes hacia el oeste y el este, y las latitudes hacia el sur y el norte en grados decimales, con una precisión de al menos dos decimales.</p>
+			<p>Es posible añadir una despcripción de la localización geográfica.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:extent&gt;
+				&lt;gmd:EX_Extent&gt;
+					&lt;gmd:description&gt;
+						&lt;gco:CharacterString&gt;Península Ibérica, Illes Balears, Canarias, Ceuta y Melilla&lt;/gco:CharacterString&gt;
+					&lt;/gmd:description&gt;
+					&lt;gmd:geographicElement&gt;
+						&lt;gmd:EX_GeographicBoundingBox&gt;
+							&lt;gmd:westBoundLongitude&gt;
+								&lt;gco:Decimal&gt;-19.00&lt;/gco:Decimal&gt;
+							&lt;/gmd:westBoundLongitude&gt;
+							&lt;gmd:eastBoundLongitude&gt;
+								&lt;gco:Decimal&gt;4.30&lt;/gco:Decimal&gt;
+							&lt;/gmd:eastBoundLongitude&gt;
+							&lt;gmd:southBoundLatitude&gt;
+								&lt;gco:Decimal&gt;27.60&lt;/gco:Decimal&gt;
+							&lt;/gmd:southBoundLatitude&gt;
+							&lt;gmd:northBoundLatitude&gt;
+								&lt;gco:Decimal&gt;44.00&lt;/gco:Decimal&gt;
+							&lt;/gmd:northBoundLatitude&gt;
+						&lt;/gmd:EX_GeographicBoundingBox&gt;
+					&lt;/gmd:geographicElement&gt;
+					&lt;gmd:temporalElement gco:nilReason="missing"/&gt;
+					&lt;gmd:verticalElement gco:nilReason="missing"/&gt;
+				&lt;/gmd:EX_Extent&gt;
+			&lt;/gmd:extent&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalFormat" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalFormat')">&times;</span>
+    <h2>gmd:MD_Format</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:distributionFormat/gmd:MD_Format/</p>
+    <p><strong>Descripción: Formato de distribución</strong>
+		<tr>
+			<p>Proporciona una descripción del formato de los datos a distribuir. Es necesario indicar los formatos en los que está disponible el conjunto de datos, como por ejemplo shapefile, tiff, CSV, etc.</p>
+			<p>Texto libre, pero también se pueden utilizar listas controladas.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:distributionFormat&gt;
+				&lt;gmd:MD_Format&gt;
+					&lt;gmd:name&gt;
+						&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;GML&lt;/gmx:Anchor&gt;
+					&lt;/gmd:name&gt;
+					&lt;gmd:version&gt;
+						&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
+					&lt;/gmd:version&gt;
+					&lt;gmd:specification&gt;
+						&lt;gco:CharacterString&gt;Desconocida&lt;/gco:CharacterString&gt;
+					&lt;/gmd:specification&gt;
+				&lt;/gmd:MD_Format&gt;
+			&lt;/gmd:distributionFormat&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalFormat" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalFormat')">&times;</span>
+    <h2>gmd:MD_Format</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:distributionFormat/gmd:MD_Format/</p>
+    <p><strong>Descripción: Formato de distribución</strong>
+		<tr>
+			<p>Proporciona una descripción del formato de los datos a distribuir. Es necesario indicar los formatos en los que está disponible el conjunto de datos, como por ejemplo shapefile, tiff, CSV, etc.</p>
+			<p>Texto libre, pero también se pueden utilizar listas controladas.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:distributionFormat&gt;
+				&lt;gmd:MD_Format&gt;
+					&lt;gmd:name&gt;
+						&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;GML&lt;/gmx:Anchor&gt;
+					&lt;/gmd:name&gt;
+					&lt;gmd:version&gt;
+						&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
+					&lt;/gmd:version&gt;
+					&lt;gmd:specification&gt;
+						&lt;gco:CharacterString&gt;Desconocida&lt;/gco:CharacterString&gt;
+					&lt;/gmd:specification&gt;
+				&lt;/gmd:MD_Format&gt;
+			&lt;/gmd:distributionFormat&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalonLine" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalonLine')">&times;</span>
+    <h2>gmd:CI_OnlineResource</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:onLine/gmd:CI_OnlineResource</p>
+    <p><strong>Descripción: Recurso en línea</strong>
+		<tr>
+			<p>Enlace (URL) para acceder, descargar, consultar o proporcionar información adicional sobre el recurso.</p>
+			<p>Se suelen incluir la operación GetCapabilities de los servicios de visualización, de descarga o cualquier enlace que permita el acceso en línea del recurso. También se pueden incluir otras operaciones como GetMap o GetFeatureInfo</p>
+			<p>Es necesario además indicar las siguientes características de la URL introducida:
+				<p>- Nombre: Incluir el nombre normalizado del servicio.</p>
+				<p>- Protocolo: Lista controlada</p>
+				<p>- Tipo de servicio de datos espaciales: Lista controlada</p>
+			</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:onLine&gt;
+				&lt;gmd:CI_OnlineResource&gt;
+					&lt;gmd:linkage&gt;
+						&lt;gmd:URL&gt;<span class="highlight">https://www.ign.es/wms-inspire/unidades-administrativas?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.3.0</span>&lt;/gmd:URL&gt;
+					&lt;/gmd:linkage&gt;
+					&lt;gmd:protocol&gt;
+						&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;<span class="highlight">OGC Web Map Service</span>&lt;/gmx:Anchor&gt;
+					&lt;/gmd:protocol&gt;
+					&lt;gmd:applicationProfile&gt;
+						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;<span class="highlight">Servicio de visualización</span>&lt;/gmx:Anchor&gt;
+					&lt;/gmd:applicationProfile&gt;
+					&lt;gmd:name xsi:type="gmd:PT_FreeText_PropertyType"&gt;
+						&lt;gco:CharacterString&gt;<span class="highlight">Servicio de visualización (WMS) de Unidades administrativas de España</span>&lt;/gco:CharacterString&gt;
+					&lt;/gmd:name&gt;
+					&lt;gmd:function&gt;
+						&lt;gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode"
+												   codeListValue="information"/&gt;
+					&lt;/gmd:function&gt;
+				&lt;/gmd:CI_OnlineResource&gt;
+			&lt;/gmd:onLine&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalscope" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalscope')">&times;</span>
+    <h2>gmd:MD_Format</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope</p>
+    <p><strong>Descripción: Alcance</strong>
+		<tr>
+			<p>Información sobre la calidad del recurso.</p>
+			<p>Lista controlada.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:scope&gt;
+				&lt;gmd:DQ_Scope&gt;
+					&lt;gmd:level&gt;
+						&lt;gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode"
+											codeListValue="<span class="highlight">dataset</span>"/&gt;
+					&lt;/gmd:level&gt;
+				&lt;/gmd:DQ_Scope&gt;
+			&lt;/gmd:scope&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modallinaje" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modallinaje')">&times;</span>
+    <h2>gmd:LI_Lineage</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage</p>
+    <p><strong>Descripción: Linaje</strong>
+		<tr>
+			<p>Información sobre la calidad del recurso.</p>
+			<p>Una descripción de la fuente(s) y el proceso(s) de producción utilizado(s) en la producción del recurso y/o la calidad general del conjunto de datos espaciales.</p>
+		</tr>
+	</p>
+  </div>
+</div>
+<div id="modalRefSystem" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalRefSystem')">&times;</span>
+    <h2>gmd:referenceSystemInfo</h2>
+    <p><strong>Ruta: </strong>MD_metadata/gmd:referenceSystemInfo</p>
+    <p><strong>Descripción: Sistema de referencia (coordenadas o espacial)</strong>
+		<tr>
+			<p>Descripción del sistema o sistemas de referencia de las coordenadas utilizados en el conjunto de datos. Para referirse a los sistemas de referencia de coordenadas se debe utilizar el EPSG.</p>
+			<p>Lista controlada.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:referenceSystemInfo&gt;
+				&lt;gmd:MD_ReferenceSystem&gt;
+					&lt;gmd:referenceSystemIdentifier&gt;
+						&lt;gmd:RS_Identifier&gt;
+							&lt;gmd:code&gt;
+								&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258"&gt;
+									<span class="highlight">ETRS89 en la Península, Illes Balears, Ceuta y Melilla. Coordenadas geográficas longitud y latitud.</span>
+								&lt;/gmx:Anchor&gt;
+							&lt;/gmd:code&gt;
+						&lt;/gmd:RS_Identifier&gt;
+					&lt;/gmd:referenceSystemIdentifier&gt;
+				&lt;/gmd:MD_ReferenceSystem&gt;
+			&lt;/gmd:referenceSystemInfo&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalCod" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalCod')">&times;</span>
+    <h2>gmd:distributionFormat</h2>
+    <p><strong>Ruta: </strong>gmd:MD_metadata/gmd:distributionInfo/gmd:distributionFormat</p>
+    <p><strong>Descripción: Codificación</strong>
+		<tr>
+			<p>Descripción del formato que especifican la representación de los objetos de datos en un registro, archivo, mensaje, dispositivo de almacenamiento o canal de transmisión.</p>
+			<p>Lista controlada.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;gmd:distributionFormat&gt;
+				&lt;gmd:MD_Format&gt;
+					&lt;gmd:name&gt;
+						&lt;gmx:Anchor xlink:href="https://inspire.ec.europa.eu/media-types/application/x-shapefile"&gt;
+							<span class="highlight">Shapefile (.shp)</span>
+						&lt;/gmx:Anchor&gt;
+					&lt;/gmd:name&gt;
+					&lt;gmd:version&gt;
+						&lt;gco:CharacterString&gt;<span class="highlight">Desconocida</span>&lt;/gco:CharacterString&gt;
+					&lt;/gmd:version&gt;
+					&lt;gmd:specification&gt;
+						&lt;gco:CharacterString&gt;<span class="highlight">Desconocida</span>&lt;/gco:CharacterString&gt;
+					&lt;/gmd:specification&gt;
+				&lt;/gmd:MD_Format&gt;
+			&lt;/gmd:distributionFormat&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalTopology" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalTopology')">&times;</span>
+    <h2>gmd:DQ_TopologicalConsistency</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:dataQualityInfo/ gmd:DQ_DataQuality/gmd:report/ gmd:DQ_TopologicalConsistency</p>
+    <p><strong>Descripción: Consistencia topológica</strong>
+		<tr>
+			<p>Corrección de las características topológicas codificadas explícitamente del conjunto de datos según lo descrito por el ámbito.</p>
+		</tr>
+	</p>
+  </div>
+</div>
+<div id="modalServiceType" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalServiceType')">&times;</span>
+    <h2>srv:serviceType</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType</p>
+    <p><strong>Descripción: Tipo de Servicio</strong>
+		<tr>
+			<p>Forma parte la indentificación del servicio.</p>
+			<p>Lista controlada.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;srv:serviceType&gt;
+				&lt;gco:LocalName codeSpace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"&gt;
+					<span class="highlight">view</span>
+				&lt;/gco:LocalName&gt;
+			&lt;/srv:serviceType&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalCouplingType" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalCouplingType')">&times;</span>
+    <h2>srv:couplingType</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:couplingType</p>
+    <p><strong>Descripción: Tipo del recurso acoplado</strong>
+		<tr>
+			<p>Forma parte la identificación del servicio.</p>
+			<p>Lista controlada.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;srv:couplingType&gt;
+				&lt;srv:SV_CouplingType 
+					codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#SV_CouplingType" 
+					codeListValue="<span class="highlight">tight</span>"&gt;
+					<span class="highlight">Ajustado</span>
+				&lt;/srv:SV_CouplingType&gt;
+			&lt;/srv:couplingType&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalServiceVersion" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalServiceVersion')">&times;</span>
+    <h2>srv:serviceTypeVersion</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceTypeVersion</p>
+    <p><strong>Descripción: Versión del servicio</strong>
+		<tr>
+			<p>Forma parte la identificación del servicio.</p>
+			<p>Texto libre.</p>
+		</tr>
+	</p>
+  </div>
+</div>
+<div id="modalOperations" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalOperations')">&times;</span>
+    <h2>srv:containsOperations</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations</p>
+    <p><strong>Descripción: Operaciones del servicio</strong>
+		<tr>
+			<p>Para cada operación hay que indicar el nombre de la operación, el protocolo y el enlace o URL.</p>
+		</tr>
+	</p>
+    <p><strong>Ejemplo:</strong>
+		<pre><code>
+			&lt;srv:connectPoint&gt;
+				&lt;gmd:CI_OnlineResource&gt;
+					&lt;gmd:linkage&gt;
+						&lt;gmd:URL&gt;<span class="highlight">https://www.ign.es/wms-inspire/unidades-administrativas?request=GetCapabilities&amp;service=WMS&amp;version=1.3.0</span>&lt;/gmd:URL&gt;
+					&lt;/gmd:linkage&gt;
+					&lt;gmd:protocol&gt;
+						&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;
+							<span class="highlight">OGC Web Map Service</span>
+						&lt;/gmx:Anchor&gt;
+					&lt;/gmd:protocol&gt;
+					&lt;gmd:applicationProfile&gt;
+						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;
+							<span class="highlight">Servicio de visualización</span>
+						&lt;/gmx:Anchor&gt;
+					&lt;/gmd:applicationProfile&gt;
+				&lt;/gmd:CI_OnlineResource&gt;
+			&lt;/srv:connectPoint&gt;
+		</code></pre>
+	</p>
+  </div>
+</div>
+<div id="modalCoupling" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalCoupling')">&times;</span>
+    <h2>srv:SV_CoupledResource</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:identificationInfo/srv:SV_CoupledResource</p>
+    <p><strong>Descripción: Recurso acoplado</strong>
+		<tr>
+			<p>Vincula un determinado recurso (conjunto de datos o servicios) identificado a través de su identificador.</p>
+		</tr>
+	</p>
+  </div>
+</div>
+<div id="modalOperaOn" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalOperaOn')">&times;</span>
+    <h2>srv:operatesOn</h2>
+    <p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:operatesOn</p>
+    <p><strong>Descripción: Opera en</strong>
+		<tr>
+			<p>Indicar la URL del fichero de metadatos de los conjuntos de datos que publica el servicio web.</p>
+		</tr>
+	</p>
+  </div>
+</div>
+
+
+
+
+<!-- Script para manejar modales -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Cerrar modal haciendo clic fuera del contenido
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
