@@ -328,9 +328,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			gmd:fileIdentifier&gt;
+			&lt;gmd:fileIdentifier&gt;
 				  &lt;gco:CharacterString>spaignLLM&lt;/gco:CharacterString&gt;
-			gmd:fileIdentifier&gt;
+			&lt;gmd:fileIdentifier&gt;
 		</code></pre>
 	</p>
   </div>
@@ -470,7 +470,7 @@
 <div id="modalNormaMD" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modalNormaMD')">&times;</span>
-    <h2>gmd:dateStamp</h2>
+    <h2>gmd:metadataStandardName</h2>
 	<p><strong>Ruta: </strong>gmd:MD_Metadata/gmd:metadataStandardName</p>
     <p><strong>Descripción: Nombre de la norma de metadatos, incluido el nombre del perfil.</strong>
 		<tr>
@@ -565,7 +565,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			<pre><code>
 				&lt;gmd:pointOfContact&gt;
 					&lt;gmd:CI_ResponsibleParty&gt;
@@ -610,7 +610,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:date&gt;
 				&lt;gmd:CI_Date&gt;
 					&lt;gmd:date&gt;
@@ -642,7 +642,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:identifier&gt;
 				&lt;gmd:MD_Identifier&gt;
 					&lt;gmd:code&gt;
@@ -674,7 +674,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:descriptiveKeywords&gt;
 				&lt;gmd:MD_Keywords&gt;
 					&lt;gmd:keyword&gt;
@@ -707,7 +707,7 @@
 <div id="modalRestrictions" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modalRestrictions')">&times;</span>
-    <h2>gmd:abstract</h2>
+    <h2>gmd:MD_LegalConstraints</h2>
     <p><strong>Ruta: </strong>MD_metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints</p>
     <p><strong>Descripción: Restricciones en el acceso y uso del recurso.</strong>
 		<tr>
@@ -716,7 +716,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:resourceConstraints&gt;
 				&lt;gmd:MD_LegalConstraints&gt;
 					&lt;gmd:accessConstraints&gt;
@@ -757,7 +757,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo de escala:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:spatialResolution&gt;
 				&lt;gmd:MD_Resolution&gt;
 					&lt;gmd:equivalentScale&gt;
@@ -772,7 +772,7 @@
 		</code></pre>
 	</p>
 	<p><strong>Ejemplo de resolución:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:spatialResolution&gt;
 				&lt;gmd:MD_Resolution&gt;
 					&lt;gmd:distance&gt;	
@@ -796,7 +796,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:language&gt;
 				&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa"&gt;Español&lt;/gmd:LanguageCode&gt;
 			&lt;/gmd:language&gt;
@@ -816,7 +816,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:topicCategory&gt;
 				&lt;gmd:MD_TopicCategoryCode&gt;boundaries&lt;/gmd:MD_TopicCategoryCode&gt;
 			&lt;/gmd:topicCategory&gt;
@@ -836,7 +836,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:extent&gt;
 				&lt;gmd:EX_Extent&gt;
 					&lt;gmd:description&gt;
@@ -878,7 +878,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:distributionFormat&gt;
 				&lt;gmd:MD_Format&gt;
 					&lt;gmd:name&gt;
@@ -908,7 +908,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:distributionFormat&gt;
 				&lt;gmd:MD_Format&gt;
 					&lt;gmd:name&gt;
@@ -943,7 +943,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:onLine&gt;
 				&lt;gmd:CI_OnlineResource&gt;
 					&lt;gmd:linkage&gt;
@@ -980,7 +980,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:scope&gt;
 				&lt;gmd:DQ_Scope&gt;
 					&lt;gmd:level&gt;
@@ -1018,7 +1018,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:referenceSystemInfo&gt;
 				&lt;gmd:MD_ReferenceSystem&gt;
 					&lt;gmd:referenceSystemIdentifier&gt;
@@ -1048,7 +1048,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;gmd:distributionFormat&gt;
 				&lt;gmd:MD_Format&gt;
 					&lt;gmd:name&gt;
@@ -1092,7 +1092,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;srv:serviceType&gt;
 				&lt;gco:LocalName codeSpace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"&gt;
 					<span class="highlight">view</span>
@@ -1114,7 +1114,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;srv:couplingType&gt;
 				&lt;srv:SV_CouplingType 
 					codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#SV_CouplingType" 
@@ -1150,7 +1150,7 @@
 		</tr>
 	</p>
     <p><strong>Ejemplo:</strong>
-		<pre><code>
+		<pre><code class="ejemplos">
 			&lt;srv:connectPoint&gt;
 				&lt;gmd:CI_OnlineResource&gt;
 					&lt;gmd:linkage&gt;
