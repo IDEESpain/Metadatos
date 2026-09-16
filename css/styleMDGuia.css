@@ -235,6 +235,7 @@ aside {
       background-color: #92a7bd;
       padding: 1rem;
       border-radius: 0.4rem;
+      min-width: max-content;
     }
 
     .close {
