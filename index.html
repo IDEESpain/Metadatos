@@ -328,9 +328,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:fileIdentifier&gt;
-				  &lt;gco:CharacterString>spaignLLM&lt;/gco:CharacterString&gt;
-			&lt;gmd:fileIdentifier&gt;
+&lt;gmd:fileIdentifier&gt;
+	&lt;gco:CharacterString>spaignLLM&lt;/gco:CharacterString&gt;
+&lt;gmd:fileIdentifier&gt;
 		</code></pre>
 	</p>
   </div>
@@ -351,9 +351,9 @@
     <p><strong>Ejemplo:</strong>«español» se seleccionaría «spa»</p>
 	<div class="modal-example">
 			<pre><code class="ejemplos">
-				&lt;gmd:language&gt;
-					&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa">Español&lt;/gmd:LanguageCode&gt;
-				&lt;/gmd:language&gt;
+&lt;gmd:language&gt;
+	&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa">Español&lt;/gmd:LanguageCode&gt;
+&lt;/gmd:language&gt;
 			</code></pre>
 	</div>
   </div>
@@ -373,10 +373,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:characterSet&gt;
-				  &lt;gmd:MD_CharacterSetCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode"
-                                     codeListValue="utf8"/&gt;
-			&lt;/gmd:characterSet&gt;
+&lt;gmd:characterSet&gt;
+	&lt;gmd:MD_CharacterSetCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8"/&gt;
+&lt;/gmd:characterSet&gt;
 		</code></pre>
 	</p>
   </div>
@@ -394,10 +393,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:hierarchyLevel&gt;
-				  &lt;gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode"
-                        codeListValue="dataset"&gt;Conjunto de datos&lt;/gmd:MD_ScopeCode&gt;
-			&lt;/gmd:hierarchyLevel&gt;
+&lt;gmd:hierarchyLevel&gt;
+	&lt;gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset"&gt;Conjunto de datos&lt;/gmd:MD_ScopeCode&gt;
+&lt;/gmd:hierarchyLevel&gt;
 		</code></pre>
 	</p>
   </div>
@@ -410,9 +408,9 @@
     <p><strong>Descripción: Organización responsable de la creación y el mantenimiento de los metadatos.</strong>
 		<tr>
 			<p>Mínima información:
-				<p>- Nombre de la organización (gmd:organisationName): texto libre.</p>
-				<p>- Dirección de correo electrónico de contacto (gmd:contactInfo/gmd:address): texto libre.</p>
-				<p>- Función (gmd:role/CI_RoleCode): lista controlada https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode.</p>
+				<li> Nombre de la organización (gmd:organisationName): texto libre.</li>
+				<li> Dirección de correo electrónico de contacto (gmd:contactInfo/gmd:address): texto libre.</li>
+				<li> Función (gmd:role/CI_RoleCode): lista controlada https://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode.</li>
 			</p>
 			<p>Nota: Se revisa el valor de la lista controlada no el texto libre.En INSPIRE obligatorio rol "Punto de Contacto"</p>
 			<p>Nota: En INSPIRE obligatorio rol "Punto de Contacto".</p>
@@ -420,29 +418,27 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 			<pre><code class="ejemplos">
-				&lt;gmd:contact&gt;
-					&lt;gmd:CI_ResponsibleParty&gt;
-						&lt;gmd:organisationName&gt;
-							&lt;gco:CharacterString&gt;Nombre Organización&lt;/gco:CharacterString&gt;
-						&lt;/gmd:organisationName&gt;
-						&lt;gmd:contactInfo&gt;
-							&lt;gmd:CI_Contact&gt;
-								&lt;gmd:address&gt;
-									&lt;gmd:CI_Address&gt;
-										&lt;gmd:electronicMailAddress&gt;
-											&lt;gco:CharacterString&gt;organizacion@contacto.es&lt;/gco:CharacterString&gt;
-										&lt;/gmd:electronicMailAddress&gt;
-									&lt;/gmd:CI_Address&gt;
-								&lt;/gmd:address&gt;
-							&lt;/gmd:CI_Contact&gt;
-						&lt;/gmd:contactInfo&gt;
-						&lt;gmd:role&gt;
-							&lt;gmd:CI_RoleCode 
-								codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"
-								codeListValue="pointOfContact"/&gt;
-						&lt;/gmd:role&gt;
-					&lt;/gmd:CI_ResponsibleParty&gt;
-				&lt;/gmd:contact&gt;
+&lt;gmd:contact&gt;
+	&lt;gmd:CI_ResponsibleParty&gt;
+		&lt;gmd:organisationName&gt;
+			&lt;gco:CharacterString&gt;Nombre Organización&lt;/gco:CharacterString&gt;
+		&lt;/gmd:organisationName&gt;
+		&lt;gmd:contactInfo&gt;
+			&lt;gmd:CI_Contact&gt;
+				&lt;gmd:address&gt;
+					&lt;gmd:CI_Address&gt;
+						&lt;gmd:electronicMailAddress&gt;
+							&lt;gco:CharacterString&gt;organizacion@contacto.es&lt;/gco:CharacterString&gt;
+						&lt;/gmd:electronicMailAddress&gt;
+					&lt;/gmd:CI_Address&gt;
+				&lt;/gmd:address&gt;
+			&lt;/gmd:CI_Contact&gt;
+		&lt;/gmd:contactInfo&gt;
+		&lt;gmd:role&gt;
+			&lt;gmd:CI_RoleCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/&gt;
+		&lt;/gmd:role&gt;
+	&lt;/gmd:CI_ResponsibleParty&gt;
+&lt;/gmd:contact&gt;
 		</code></pre>
 	</p>
   </div>
@@ -460,9 +456,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:dateStamp&gt;
-				&lt;gco:Date&gt;2025-11-21&lt;/gco:Date&gt;
-			&lt;/gmd:dateStamp&gt;
+&lt;gmd:dateStamp&gt;
+	&lt;gco:Date&gt;2025-11-21&lt;/gco:Date&gt;
+&lt;/gmd:dateStamp&gt;
 		</code></pre>
 	</p>
   </div>
@@ -480,9 +476,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:metadataStandardName&gt;
-				&lt;gco:CharacterString&gt;Reglamento (CE) Nº 1205/2008 de INSPIRE&lt;/gco:CharacterString&gt;
-			&lt;/gmd:metadataStandardName&gt;
+&lt;gmd:metadataStandardName&gt;
+	&lt;gco:CharacterString&gt;Reglamento (CE) Nº 1205/2008 de INSPIRE&lt;/gco:CharacterString&gt;
+&lt;/gmd:metadataStandardName&gt;
 		</code></pre>
 	</p>
   </div>
@@ -499,9 +495,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:metadataStandardVersion&gt;
-				&lt;gco:CharacterString&gt;TG 2.0&lt;/gco:CharacterString&gt;
-			&lt;/gmd:metadataStandardVersion&gt;
+&lt;gmd:metadataStandardVersion&gt;
+	&lt;gco:CharacterString&gt;TG 2.0&lt;/gco:CharacterString&gt;
+&lt;/gmd:metadataStandardVersion&gt;
 		</code></pre>
 	</p>
   </div>
@@ -519,9 +515,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:title&gt;
-				&lt;gco:CharacterString&gt;Divisiones Administrativas de España&lt;/gco:CharacterString&gt;
-			&lt;/gmd:title&gt;
+&lt;gmd:title&gt;
+	&lt;gco:CharacterString&gt;Divisiones Administrativas de España&lt;/gco:CharacterString&gt;
+&lt;/gmd:title&gt;
 		</code></pre>
 	</p>
   </div>
@@ -540,11 +536,11 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:abstract&gt;
-				&lt;gco:CharacterString&gt;
-					Elementos de hidrografía de Asturias compuesto de aguas físicas, tanto naturales como artificiales (cuencas hidrográficas, cursos de agua, lagos, lagunas y embalses, así como algunas construcciones asociadas a la red hidrográfica y puntos de interés hídrico (construcciones hidrográficas)).
-				&lt;/gco:CharacterString&gt;
-			&lt;/gmd:abstract&gt;
+&lt;gmd:abstract&gt;
+	&lt;gco:CharacterString&gt;
+		Elementos de hidrografía de Asturias compuesto de aguas físicas, tanto naturales como artificiales (cuencas hidrográficas, cursos de agua, lagos, lagunas y embalses, así como algunas construcciones asociadas a la red hidrográfica y puntos de interés hídrico (construcciones hidrográficas)).
+	&lt;/gco:CharacterString&gt;
+&lt;/gmd:abstract&gt;
 		</code></pre>
 	</p>
   </div>
@@ -566,30 +562,29 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			<pre><code>
-				&lt;gmd:pointOfContact&gt;
-					&lt;gmd:CI_ResponsibleParty&gt;
-						&lt;gmd:organisationName&gt;
-							&lt;gco:CharacterString&gt;Nombre Organización&lt;/gco:CharacterString&gt;
-						&lt;/gmd:organisationName&gt;
-						&lt;gmd:contactInfo&gt;
-							&lt;gmd:CI_Contact&gt;
-								&lt;gmd:address&gt;
-									&lt;gmd:CI_Address&gt;
-										&lt;gmd:electronicMailAddress&gt;
-											&lt;gco:CharacterString&gt;organizacion@contacto.es&lt;/gco:CharacterString&gt;
-										&lt;/gmd:electronicMailAddress&gt;
-									&lt;/gmd:CI_Address&gt;
-								&lt;/gmd:address&gt;
-							&lt;/gmd:CI_Contact&gt;
-						&lt;/gmd:contactInfo&gt;
-						&lt;gmd:role&gt;
-							&lt;gmd:CI_RoleCode 
-								codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"
-								codeListValue="pointOfContact"/&gt;
-						&lt;/gmd:role&gt;
-					&lt;/gmd:CI_ResponsibleParty&gt;
-				&lt;/gmd:pointOfContact&gt;
+&lt;gmd:pointOfContact&gt;
+	&lt;gmd:CI_ResponsibleParty&gt;
+		&lt;gmd:organisationName&gt;
+			&lt;gco:CharacterString&gt;Nombre Organización&lt;/gco:CharacterString&gt;
+		&lt;/gmd:organisationName&gt;
+		&lt;gmd:contactInfo&gt;
+			&lt;gmd:CI_Contact&gt;
+				&lt;gmd:address&gt;
+					&lt;gmd:CI_Address&gt;
+						&lt;gmd:electronicMailAddress&gt;
+							&lt;gco:CharacterString&gt;organizacion@contacto.es&lt;/gco:CharacterString&gt;
+						&lt;/gmd:electronicMailAddress&gt;
+					&lt;/gmd:CI_Address&gt;
+				&lt;/gmd:address&gt;
+			&lt;/gmd:CI_Contact&gt;
+		&lt;/gmd:contactInfo&gt;
+		&lt;gmd:role&gt;
+			&lt;gmd:CI_RoleCode 
+				codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"
+				codeListValue="pointOfContact"/&gt;
+		&lt;/gmd:role&gt;
+	&lt;/gmd:CI_ResponsibleParty&gt;
+&lt;/gmd:pointOfContact&gt;
 		</code></pre>
 	</p>
   </div>
@@ -611,18 +606,18 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:date&gt;
-				&lt;gmd:CI_Date&gt;
-					&lt;gmd:date&gt;
-						&lt;gco:Date&gt;2012-01-01&lt;/gco:Date&gt;
-					&lt;/gmd:date&gt;
-					&lt;gmd:dateType&gt;
-						&lt;gmd:CI_DateTypeCode 
-							codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
-							codeListValue="creation"/&gt;
-					&lt;/gmd:dateType&gt;
-				&lt;/gmd:CI_Date&gt;
-			&lt;/gmd:date&gt;
+&lt;gmd:date&gt;
+	&lt;gmd:CI_Date&gt;
+		&lt;gmd:date&gt;
+			&lt;gco:Date&gt;2012-01-01&lt;/gco:Date&gt;
+		&lt;/gmd:date&gt;
+		&lt;gmd:dateType&gt;
+			&lt;gmd:CI_DateTypeCode 
+				codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+				codeListValue="creation"/&gt;
+		&lt;/gmd:dateType&gt;
+	&lt;/gmd:CI_Date&gt;
+&lt;/gmd:date&gt;
 		</code></pre>
 	</p>
   </div>
@@ -643,16 +638,16 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:identifier&gt;
-				&lt;gmd:MD_Identifier&gt;
-					&lt;gmd:code&gt;
-						&lt;gco:CharacterString&gt;BDLJE&lt;/gco:CharacterString&gt;
-					&lt;/gmd:code&gt;
-					&lt;gmd:codeSpace&gt;
-						&lt;gco:CharacterString&gt;IGN&lt;/gco:CharacterString&gt;
-					&lt;/gmd:codeSpace&gt;
-				&lt;/gmd:MD_Identifier&gt;
-			&lt;/gmd:identifier&gt;
+&lt;gmd:identifier&gt;
+	&lt;gmd:MD_Identifier&gt;
+		&lt;gmd:code&gt;
+			&lt;gco:CharacterString&gt;BDLJE&lt;/gco:CharacterString&gt;
+		&lt;/gmd:code&gt;
+		&lt;gmd:codeSpace&gt;
+			&lt;gco:CharacterString&gt;IGN&lt;/gco:CharacterString&gt;
+		&lt;/gmd:codeSpace&gt;
+	&lt;/gmd:MD_Identifier&gt;
+&lt;/gmd:identifier&gt;
 		</code></pre>
 	</p>
   </div>
@@ -675,31 +670,31 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:descriptiveKeywords&gt;
-				&lt;gmd:MD_Keywords&gt;
-					&lt;gmd:keyword&gt;
-						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/au"&gt;Unidades administrativas&lt;/gmx:Anchor&gt;
-					&lt;/gmd:keyword&gt;
-					&lt;gmd:thesaurusName&gt;
-						&lt;gmd:CI_Citation&gt;
-							&lt;gmd:title&gt;
-								&lt;gmx:Anchor xlink:href="https://www.eionet.europa.eu/gemet/inspire_themes"&gt;GEMET - INSPIRE themes, version 1.0&lt;/gmx:Anchor&gt;
-							&lt;/gmd:title&gt;
-							&lt;gmd:date&gt;
-								&lt;gmd:CI_Date&gt;
-									&lt;gmd:date&gt;
-										&lt;gco:Date&gt;2008-06-01&lt;/gco:Date&gt;
-									&lt;/gmd:date&gt;
-									&lt;gmd:dateType&gt;
-										&lt;gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
-															 codeListValue="publication"&gt;publication&lt;/gmd:CI_DateTypeCode&gt;
-									&lt;/gmd:dateType&gt;
-								&lt;/gmd:CI_Date&gt;
-							&lt;/gmd:date&gt;
-						&lt;/gmd:CI_Citation&gt;
-					&lt;/gmd:thesaurusName&gt;
-				&lt;/gmd:MD_Keywords&gt;
-			&lt;/gmd:descriptiveKeywords&gt;
+&lt;gmd:descriptiveKeywords&gt;
+	&lt;gmd:MD_Keywords&gt;
+		&lt;gmd:keyword&gt;
+			&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/theme/au"&gt;Unidades administrativas&lt;/gmx:Anchor&gt;
+		&lt;/gmd:keyword&gt;
+		&lt;gmd:thesaurusName&gt;
+			&lt;gmd:CI_Citation&gt;
+				&lt;gmd:title&gt;
+					&lt;gmx:Anchor xlink:href="https://www.eionet.europa.eu/gemet/inspire_themes"&gt;GEMET - INSPIRE themes, version 1.0&lt;/gmx:Anchor&gt;
+				&lt;/gmd:title&gt;
+				&lt;gmd:date&gt;
+					&lt;gmd:CI_Date&gt;
+						&lt;gmd:date&gt;
+							&lt;gco:Date&gt;2008-06-01&lt;/gco:Date&gt;
+						&lt;/gmd:date&gt;
+						&lt;gmd:dateType&gt;
+							&lt;gmd:CI_DateTypeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+													codeListValue="publication"&gt;publication&lt;/gmd:CI_DateTypeCode&gt;
+						&lt;/gmd:dateType&gt;
+					&lt;/gmd:CI_Date&gt;
+				&lt;/gmd:date&gt;
+			&lt;/gmd:CI_Citation&gt;
+		&lt;/gmd:thesaurusName&gt;
+	&lt;/gmd:MD_Keywords&gt;
+&lt;/gmd:descriptiveKeywords&gt;
 		</code></pre>
 	</p>
   </div>
@@ -717,31 +712,31 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:resourceConstraints&gt;
-				&lt;gmd:MD_LegalConstraints&gt;
-					&lt;gmd:accessConstraints&gt;
-						&lt;gmd:MD_RestrictionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
-												  codeListValue="otherRestrictions"/&gt;
-					&lt;/gmd:accessConstraints&gt;
-					&lt;gmd:otherConstraints&gt;
-						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"&gt;Sin limitaciones al acceso público.&lt;/gmx:Anchor&gt;
-					&lt;/gmd:otherConstraints&gt;
-				&lt;/gmd:MD_LegalConstraints&gt;
-			&lt;/gmd:resourceConstraints&gt;
-			&lt;gmd:resourceConstraints&gt;
-				&lt;gmd:MD_LegalConstraints&gt;
-					&lt;gmd:useConstraints&gt;
-						&lt;gmd:MD_RestrictionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
-												  codeListValue="otherRestrictions"/&gt;
-					&lt;/gmd:useConstraints&gt;
-					&lt;gmd:otherConstraints&gt;
-						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;No se aplican condiciones de acceso y uso.&lt;/gmx:Anchor&gt;
-					&lt;/gmd:otherConstraints&gt;
-					&lt;gmd:otherConstraints&gt;
-						&lt;gmx:Anchor xlink:href="https://creativecommons.org/licenses/by/4.0/"&gt;CC-BY 4.0&lt;/gmx:Anchor&gt;
-					&lt;/gmd:otherConstraints&gt;
-				&lt;/gmd:MD_LegalConstraints&gt;
-			&lt;/gmd:resourceConstraints&gt;
+&lt;gmd:resourceConstraints&gt;
+	&lt;gmd:MD_LegalConstraints&gt;
+		&lt;gmd:accessConstraints&gt;
+			&lt;gmd:MD_RestrictionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+										codeListValue="otherRestrictions"/&gt;
+		&lt;/gmd:accessConstraints&gt;
+		&lt;gmd:otherConstraints&gt;
+			&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"&gt;Sin limitaciones al acceso público.&lt;/gmx:Anchor&gt;
+		&lt;/gmd:otherConstraints&gt;
+	&lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;
+&lt;gmd:resourceConstraints&gt;
+	&lt;gmd:MD_LegalConstraints&gt;
+		&lt;gmd:useConstraints&gt;
+			&lt;gmd:MD_RestrictionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+										codeListValue="otherRestrictions"/&gt;
+		&lt;/gmd:useConstraints&gt;
+		&lt;gmd:otherConstraints&gt;
+			&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"&gt;No se aplican condiciones de acceso y uso.&lt;/gmx:Anchor&gt;
+		&lt;/gmd:otherConstraints&gt;
+		&lt;gmd:otherConstraints&gt;
+			&lt;gmx:Anchor xlink:href="https://creativecommons.org/licenses/by/4.0/"&gt;CC-BY 4.0&lt;/gmx:Anchor&gt;
+		&lt;/gmd:otherConstraints&gt;
+	&lt;/gmd:MD_LegalConstraints&gt;
+&lt;/gmd:resourceConstraints&gt;
 		</code></pre>
 	</p>
   </div>
@@ -758,28 +753,28 @@
 	</p>
     <p><strong>Ejemplo de escala:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:spatialResolution&gt;
-				&lt;gmd:MD_Resolution&gt;
-					&lt;gmd:equivalentScale&gt;
-						&lt;gmd:MD_RepresentativeFraction&gt;
-							&lt;gmd:denominator&gt;
-								&lt;gco:Integer&gt;25000&lt;/gco:Integer&gt;
-							&lt;/gmd:denominator&gt;
-						&lt;/gmd:MD_RepresentativeFraction&gt;
-					&lt;/gmd:equivalentScale&gt;
-				&lt;/gmd:MD_Resolution&gt;
-			&lt;/gmd:spatialResolution&gt;
+&lt;gmd:spatialResolution&gt;
+	&lt;gmd:MD_Resolution&gt;
+		&lt;gmd:equivalentScale&gt;
+			&lt;gmd:MD_RepresentativeFraction&gt;
+				&lt;gmd:denominator&gt;
+					&lt;gco:Integer&gt;25000&lt;/gco:Integer&gt;
+				&lt;/gmd:denominator&gt;
+			&lt;/gmd:MD_RepresentativeFraction&gt;
+		&lt;/gmd:equivalentScale&gt;
+	&lt;/gmd:MD_Resolution&gt;
+&lt;/gmd:spatialResolution&gt;
 		</code></pre>
 	</p>
 	<p><strong>Ejemplo de resolución:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:spatialResolution&gt;
-				&lt;gmd:MD_Resolution&gt;
-					&lt;gmd:distance&gt;	
-						&lt;gco:Distance uom="metros"&gt;0.25&lt;/gco:Distance&gt;
-					&lt;/gmd:distance&gt;
-				&lt;/gmd:MD_Resolution&gt;
-			&lt;/gmd:spatialResolution&gt;
+&lt;gmd:spatialResolution&gt;
+	&lt;gmd:MD_Resolution&gt;
+		&lt;gmd:distance&gt;	
+			&lt;gco:Distance uom="metros"&gt;0.25&lt;/gco:Distance&gt;
+		&lt;/gmd:distance&gt;
+	&lt;/gmd:MD_Resolution&gt;
+&lt;/gmd:spatialResolution&gt;
 		</code></pre>
 	</p>
   </div>
@@ -797,9 +792,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:language&gt;
-				&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa"&gt;Español&lt;/gmd:LanguageCode&gt;
-			&lt;/gmd:language&gt;
+&lt;gmd:language&gt;
+	&lt;gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="spa"&gt;Español&lt;/gmd:LanguageCode&gt;
+&lt;/gmd:language&gt;
 		</code></pre>
 	</p>
   </div>
@@ -817,9 +812,9 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:topicCategory&gt;
-				&lt;gmd:MD_TopicCategoryCode&gt;boundaries&lt;/gmd:MD_TopicCategoryCode&gt;
-			&lt;/gmd:topicCategory&gt;
+&lt;gmd:topicCategory&gt;
+	&lt;gmd:MD_TopicCategoryCode&gt;boundaries&lt;/gmd:MD_TopicCategoryCode&gt;
+&lt;/gmd:topicCategory&gt;
 		</code></pre>
 	</p>
   </div>
@@ -837,31 +832,31 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:extent&gt;
-				&lt;gmd:EX_Extent&gt;
-					&lt;gmd:description&gt;
-						&lt;gco:CharacterString&gt;Península Ibérica, Illes Balears, Canarias, Ceuta y Melilla&lt;/gco:CharacterString&gt;
-					&lt;/gmd:description&gt;
-					&lt;gmd:geographicElement&gt;
-						&lt;gmd:EX_GeographicBoundingBox&gt;
-							&lt;gmd:westBoundLongitude&gt;
-								&lt;gco:Decimal&gt;-19.00&lt;/gco:Decimal&gt;
-							&lt;/gmd:westBoundLongitude&gt;
-							&lt;gmd:eastBoundLongitude&gt;
-								&lt;gco:Decimal&gt;4.30&lt;/gco:Decimal&gt;
-							&lt;/gmd:eastBoundLongitude&gt;
-							&lt;gmd:southBoundLatitude&gt;
-								&lt;gco:Decimal&gt;27.60&lt;/gco:Decimal&gt;
-							&lt;/gmd:southBoundLatitude&gt;
-							&lt;gmd:northBoundLatitude&gt;
-								&lt;gco:Decimal&gt;44.00&lt;/gco:Decimal&gt;
-							&lt;/gmd:northBoundLatitude&gt;
-						&lt;/gmd:EX_GeographicBoundingBox&gt;
-					&lt;/gmd:geographicElement&gt;
-					&lt;gmd:temporalElement gco:nilReason="missing"/&gt;
-					&lt;gmd:verticalElement gco:nilReason="missing"/&gt;
-				&lt;/gmd:EX_Extent&gt;
-			&lt;/gmd:extent&gt;
+&lt;gmd:extent&gt;
+	&lt;gmd:EX_Extent&gt;
+		&lt;gmd:description&gt;
+			&lt;gco:CharacterString&gt;Península Ibérica, Illes Balears, Canarias, Ceuta y Melilla&lt;/gco:CharacterString&gt;
+		&lt;/gmd:description&gt;
+		&lt;gmd:geographicElement&gt;
+			&lt;gmd:EX_GeographicBoundingBox&gt;
+				&lt;gmd:westBoundLongitude&gt;
+					&lt;gco:Decimal&gt;-19.00&lt;/gco:Decimal&gt;
+				&lt;/gmd:westBoundLongitude&gt;
+				&lt;gmd:eastBoundLongitude&gt;
+					&lt;gco:Decimal&gt;4.30&lt;/gco:Decimal&gt;
+				&lt;/gmd:eastBoundLongitude&gt;
+				&lt;gmd:southBoundLatitude&gt;
+					&lt;gco:Decimal&gt;27.60&lt;/gco:Decimal&gt;
+				&lt;/gmd:southBoundLatitude&gt;
+				&lt;gmd:northBoundLatitude&gt;
+					&lt;gco:Decimal&gt;44.00&lt;/gco:Decimal&gt;
+				&lt;/gmd:northBoundLatitude&gt;
+			&lt;/gmd:EX_GeographicBoundingBox&gt;
+		&lt;/gmd:geographicElement&gt;
+		&lt;gmd:temporalElement gco:nilReason="missing"/&gt;
+		&lt;gmd:verticalElement gco:nilReason="missing"/&gt;
+	&lt;/gmd:EX_Extent&gt;
+&lt;/gmd:extent&gt;
 		</code></pre>
 	</p>
   </div>
@@ -879,19 +874,19 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:distributionFormat&gt;
-				&lt;gmd:MD_Format&gt;
-					&lt;gmd:name&gt;
-						&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;GML&lt;/gmx:Anchor&gt;
-					&lt;/gmd:name&gt;
-					&lt;gmd:version&gt;
-						&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
-					&lt;/gmd:version&gt;
-					&lt;gmd:specification&gt;
-						&lt;gco:CharacterString&gt;Desconocida&lt;/gco:CharacterString&gt;
-					&lt;/gmd:specification&gt;
-				&lt;/gmd:MD_Format&gt;
-			&lt;/gmd:distributionFormat&gt;
+&lt;gmd:distributionFormat&gt;
+	&lt;gmd:MD_Format&gt;
+		&lt;gmd:name&gt;
+			&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;GML&lt;/gmx:Anchor&gt;
+		&lt;/gmd:name&gt;
+		&lt;gmd:version&gt;
+			&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
+		&lt;/gmd:version&gt;
+		&lt;gmd:specification&gt;
+			&lt;gco:CharacterString&gt;Desconocida&lt;/gco:CharacterString&gt;
+		&lt;/gmd:specification&gt;
+	&lt;/gmd:MD_Format&gt;
+&lt;/gmd:distributionFormat&gt;
 		</code></pre>
 	</p>
   </div>
@@ -909,19 +904,19 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:distributionFormat&gt;
-				&lt;gmd:MD_Format&gt;
-					&lt;gmd:name&gt;
-						&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;GML&lt;/gmx:Anchor&gt;
-					&lt;/gmd:name&gt;
-					&lt;gmd:version&gt;
-						&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
-					&lt;/gmd:version&gt;
-					&lt;gmd:specification&gt;
-						&lt;gco:CharacterString&gt;Desconocida&lt;/gco:CharacterString&gt;
-					&lt;/gmd:specification&gt;
-				&lt;/gmd:MD_Format&gt;
-			&lt;/gmd:distributionFormat&gt;
+&lt;gmd:distributionFormat&gt;
+	&lt;gmd:MD_Format&gt;
+		&lt;gmd:name&gt;
+			&lt;gmx:Anchor xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml"&gt;GML&lt;/gmx:Anchor&gt;
+		&lt;/gmd:name&gt;
+		&lt;gmd:version&gt;
+			&lt;gco:CharacterString&gt;4.0&lt;/gco:CharacterString&gt;
+		&lt;/gmd:version&gt;
+		&lt;gmd:specification&gt;
+			&lt;gco:CharacterString&gt;Desconocida&lt;/gco:CharacterString&gt;
+		&lt;/gmd:specification&gt;
+	&lt;/gmd:MD_Format&gt;
+&lt;/gmd:distributionFormat&gt;
 		</code></pre>
 	</p>
   </div>
@@ -944,26 +939,26 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:onLine&gt;
-				&lt;gmd:CI_OnlineResource&gt;
-					&lt;gmd:linkage&gt;
-						&lt;gmd:URL&gt;<span class="highlight">https://www.ign.es/wms-inspire/unidades-administrativas?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.3.0</span>&lt;/gmd:URL&gt;
-					&lt;/gmd:linkage&gt;
-					&lt;gmd:protocol&gt;
-						&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;<span class="highlight">OGC Web Map Service</span>&lt;/gmx:Anchor&gt;
-					&lt;/gmd:protocol&gt;
-					&lt;gmd:applicationProfile&gt;
-						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;<span class="highlight">Servicio de visualización</span>&lt;/gmx:Anchor&gt;
-					&lt;/gmd:applicationProfile&gt;
-					&lt;gmd:name xsi:type="gmd:PT_FreeText_PropertyType"&gt;
-						&lt;gco:CharacterString&gt;<span class="highlight">Servicio de visualización (WMS) de Unidades administrativas de España</span>&lt;/gco:CharacterString&gt;
-					&lt;/gmd:name&gt;
-					&lt;gmd:function&gt;
-						&lt;gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode"
-												   codeListValue="information"/&gt;
-					&lt;/gmd:function&gt;
-				&lt;/gmd:CI_OnlineResource&gt;
-			&lt;/gmd:onLine&gt;
+&lt;gmd:onLine&gt;
+	&lt;gmd:CI_OnlineResource&gt;
+		&lt;gmd:linkage&gt;
+			&lt;gmd:URL&gt;<span class="highlight">https://www.ign.es/wms-inspire/unidades-administrativas?REQUEST=GetCapabilities&amp;SERVICE=WMS&amp;VERSION=1.3.0</span>&lt;/gmd:URL&gt;
+		&lt;/gmd:linkage&gt;
+		&lt;gmd:protocol&gt;
+			&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;<span class="highlight">OGC Web Map Service</span>&lt;/gmx:Anchor&gt;
+		&lt;/gmd:protocol&gt;
+		&lt;gmd:applicationProfile&gt;
+			&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;<span class="highlight">Servicio de visualización</span>&lt;/gmx:Anchor&gt;
+		&lt;/gmd:applicationProfile&gt;
+		&lt;gmd:name xsi:type="gmd:PT_FreeText_PropertyType"&gt;
+			&lt;gco:CharacterString&gt;<span class="highlight">Servicio de visualización (WMS) de Unidades administrativas de España</span>&lt;/gco:CharacterString&gt;
+		&lt;/gmd:name&gt;
+		&lt;gmd:function&gt;
+			&lt;gmd:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode"
+										codeListValue="information"/&gt;
+		&lt;/gmd:function&gt;
+	&lt;/gmd:CI_OnlineResource&gt;
+&lt;/gmd:onLine&gt;
 		</code></pre>
 	</p>
   </div>
@@ -981,14 +976,14 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:scope&gt;
-				&lt;gmd:DQ_Scope&gt;
-					&lt;gmd:level&gt;
-						&lt;gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode"
-											codeListValue="<span class="highlight">dataset</span>"/&gt;
-					&lt;/gmd:level&gt;
-				&lt;/gmd:DQ_Scope&gt;
-			&lt;/gmd:scope&gt;
+&lt;gmd:scope&gt;
+	&lt;gmd:DQ_Scope&gt;
+		&lt;gmd:level&gt;
+			&lt;gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode"
+								codeListValue="<span class="highlight">dataset</span>"/&gt;
+		&lt;/gmd:level&gt;
+	&lt;/gmd:DQ_Scope&gt;
+&lt;/gmd:scope&gt;
 		</code></pre>
 	</p>
   </div>
@@ -1019,19 +1014,19 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:referenceSystemInfo&gt;
-				&lt;gmd:MD_ReferenceSystem&gt;
-					&lt;gmd:referenceSystemIdentifier&gt;
-						&lt;gmd:RS_Identifier&gt;
-							&lt;gmd:code&gt;
-								&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258"&gt;
-									<span class="highlight">ETRS89 en la Península, Illes Balears, Ceuta y Melilla. Coordenadas geográficas longitud y latitud.</span>
-								&lt;/gmx:Anchor&gt;
-							&lt;/gmd:code&gt;
-						&lt;/gmd:RS_Identifier&gt;
-					&lt;/gmd:referenceSystemIdentifier&gt;
-				&lt;/gmd:MD_ReferenceSystem&gt;
-			&lt;/gmd:referenceSystemInfo&gt;
+&lt;gmd:referenceSystemInfo&gt;
+	&lt;gmd:MD_ReferenceSystem&gt;
+		&lt;gmd:referenceSystemIdentifier&gt;
+			&lt;gmd:RS_Identifier&gt;
+				&lt;gmd:code&gt;
+					&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/4258"&gt;
+						<span class="highlight">ETRS89 en la Península, Illes Balears, Ceuta y Melilla. Coordenadas geográficas longitud y latitud.</span>
+					&lt;/gmx:Anchor&gt;
+				&lt;/gmd:code&gt;
+			&lt;/gmd:RS_Identifier&gt;
+		&lt;/gmd:referenceSystemIdentifier&gt;
+	&lt;/gmd:MD_ReferenceSystem&gt;
+&lt;/gmd:referenceSystemInfo&gt;
 		</code></pre>
 	</p>
   </div>
@@ -1049,21 +1044,21 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;gmd:distributionFormat&gt;
-				&lt;gmd:MD_Format&gt;
-					&lt;gmd:name&gt;
-						&lt;gmx:Anchor xlink:href="https://inspire.ec.europa.eu/media-types/application/x-shapefile"&gt;
-							<span class="highlight">Shapefile (.shp)</span>
-						&lt;/gmx:Anchor&gt;
-					&lt;/gmd:name&gt;
-					&lt;gmd:version&gt;
-						&lt;gco:CharacterString&gt;<span class="highlight">Desconocida</span>&lt;/gco:CharacterString&gt;
-					&lt;/gmd:version&gt;
-					&lt;gmd:specification&gt;
-						&lt;gco:CharacterString&gt;<span class="highlight">Desconocida</span>&lt;/gco:CharacterString&gt;
-					&lt;/gmd:specification&gt;
-				&lt;/gmd:MD_Format&gt;
-			&lt;/gmd:distributionFormat&gt;
+&lt;gmd:distributionFormat&gt;
+	&lt;gmd:MD_Format&gt;
+		&lt;gmd:name&gt;
+			&lt;gmx:Anchor xlink:href="https://inspire.ec.europa.eu/media-types/application/x-shapefile"&gt;
+				<span class="highlight">Shapefile (.shp)</span>
+			&lt;/gmx:Anchor&gt;
+		&lt;/gmd:name&gt;
+		&lt;gmd:version&gt;
+			&lt;gco:CharacterString&gt;<span class="highlight">Desconocida</span>&lt;/gco:CharacterString&gt;
+		&lt;/gmd:version&gt;
+		&lt;gmd:specification&gt;
+			&lt;gco:CharacterString&gt;<span class="highlight">Desconocida</span>&lt;/gco:CharacterString&gt;
+		&lt;/gmd:specification&gt;
+	&lt;/gmd:MD_Format&gt;
+&lt;/gmd:distributionFormat&gt;
 		</code></pre>
 	</p>
   </div>
@@ -1093,11 +1088,11 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;srv:serviceType&gt;
-				&lt;gco:LocalName codeSpace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"&gt;
-					<span class="highlight">view</span>
-				&lt;/gco:LocalName&gt;
-			&lt;/srv:serviceType&gt;
+&lt;srv:serviceType&gt;
+	&lt;gco:LocalName codeSpace="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"&gt;
+		<span class="highlight">view</span>
+	&lt;/gco:LocalName&gt;
+&lt;/srv:serviceType&gt;
 		</code></pre>
 	</p>
   </div>
@@ -1115,13 +1110,13 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;srv:couplingType&gt;
-				&lt;srv:SV_CouplingType 
-					codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#SV_CouplingType" 
-					codeListValue="<span class="highlight">tight</span>"&gt;
-					<span class="highlight">Ajustado</span>
-				&lt;/srv:SV_CouplingType&gt;
-			&lt;/srv:couplingType&gt;
+&lt;srv:couplingType&gt;
+	&lt;srv:SV_CouplingType 
+		codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#SV_CouplingType" 
+		codeListValue="<span class="highlight">tight</span>"&gt;
+		<span class="highlight">Ajustado</span>
+	&lt;/srv:SV_CouplingType&gt;
+&lt;/srv:couplingType&gt;
 		</code></pre>
 	</p>
   </div>
@@ -1151,23 +1146,23 @@
 	</p>
     <p><strong>Ejemplo:</strong>
 		<pre><code class="ejemplos">
-			&lt;srv:connectPoint&gt;
-				&lt;gmd:CI_OnlineResource&gt;
-					&lt;gmd:linkage&gt;
-						&lt;gmd:URL&gt;<span class="highlight">https://www.ign.es/wms-inspire/unidades-administrativas?request=GetCapabilities&amp;service=WMS&amp;version=1.3.0</span>&lt;/gmd:URL&gt;
-					&lt;/gmd:linkage&gt;
-					&lt;gmd:protocol&gt;
-						&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;
-							<span class="highlight">OGC Web Map Service</span>
-						&lt;/gmx:Anchor&gt;
-					&lt;/gmd:protocol&gt;
-					&lt;gmd:applicationProfile&gt;
-						&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;
-							<span class="highlight">Servicio de visualización</span>
-						&lt;/gmx:Anchor&gt;
-					&lt;/gmd:applicationProfile&gt;
-				&lt;/gmd:CI_OnlineResource&gt;
-			&lt;/srv:connectPoint&gt;
+&lt;srv:connectPoint&gt;
+	&lt;gmd:CI_OnlineResource&gt;
+		&lt;gmd:linkage&gt;
+			&lt;gmd:URL&gt;<span class="highlight">https://www.ign.es/wms-inspire/unidades-administrativas?request=GetCapabilities&amp;service=WMS&amp;version=1.3.0</span>&lt;/gmd:URL&gt;
+		&lt;/gmd:linkage&gt;
+		&lt;gmd:protocol&gt;
+			&lt;gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms"&gt;
+				<span class="highlight">OGC Web Map Service</span>
+			&lt;/gmx:Anchor&gt;
+		&lt;/gmd:protocol&gt;
+		&lt;gmd:applicationProfile&gt;
+			&lt;gmx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"&gt;
+				<span class="highlight">Servicio de visualización</span>
+			&lt;/gmx:Anchor&gt;
+		&lt;/gmd:applicationProfile&gt;
+	&lt;/gmd:CI_OnlineResource&gt;
+&lt;/srv:connectPoint&gt;
 		</code></pre>
 	</p>
   </div>

@@ -171,8 +171,9 @@ aside {
 	
 	pre {
       background-color: #92a7bd;
-      padding: 1rem;
+      padding: 0.1em;
       overflow-x: auto;
+      margin-bottom: 0.8rem;
     }
 
     a.prop-link {
@@ -207,7 +208,6 @@ aside {
       background-color: #FAF8F5;
       margin: 10% auto;
       padding: 2rem;
-      border: 0.1rem solid #f0eae2;
       width: 60%;
       box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
       border-radius: 0.8rem;
@@ -231,7 +231,6 @@ aside {
       font-size: 0.95rem;
       background-color: #92a7bd;
       padding: 1rem;
-      border-radius: 0.4rem;
       min-width: max-content;
     }
 
